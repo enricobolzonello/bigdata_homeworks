@@ -6,7 +6,7 @@ Implement two algorithms:
 
 Usage:
 
-    python GO30HW1.py C R <path/file.txt>
+    python GO30HW1.py <C> <R> <path/file.txt>
     
     Args:
         C: number of data partitions, integer
@@ -14,7 +14,12 @@ Usage:
 """
 from pyspark import SparkContext, SparkConf
 from CountTriangles import CountTriangles
+import re,sys,os
+import time
 
+P=8191
+
+@timeit
 def MR_ApproxTCwithNodeColors(RDD, C):
     """First algorithm for Triangle Counting
 
@@ -37,6 +42,7 @@ def MR_ApproxTCwithNodeColors(RDD, C):
     #TODO
     return
 
+@timeit
 def MR_ApproxTCwithSparkPartitions(RDD, C):
     """Second Algorithm for Triangle Counting
 
@@ -57,9 +63,53 @@ def MR_ApproxTCwithSparkPartitions(RDD, C):
     #TODO
     return
 
+# helper function to remove the directory from the data path
+def rem_dir(s):
+    find_backslash = s.find("/")
+
+    if find_backslash != -1:
+        s = s[find_backslash+1:]
+    return s
+
+# utility function to measure the execution time of a function
+# TODO: for the first function they want the average execution time, rn we are outputting each execution
+def timeit(f):
+    def wrap(*args, **kwargs):
+        time1 = time.time()
+        ret = f(*args, **kwargs)
+        time2 = time.time()
+        print('{:s} function took {:.3f} ms'.format(f.__name__, (time2-time1)*1000.0))
+
+        return ret
+    return wrap
+
 def main():
-    #TODO
-    print("main")
+    # CHECKING NUMBER OF CMD LINE PARAMTERS
+    assert len(sys.argv) == 4, "Usage: python GO30HW1.py <C> <R> <path/file_name>"
+
+	# SPARK SETUP
+    conf = SparkConf().setAppName('TriangleCounting')
+    sc = SparkContext(conf=conf)
+
+    # parse C parameter
+    C = sys.argv[1]
+    assert C.isdigit(), "C must be an integer"
+    C = int(C)
+
+    # parse R parameter
+    R = sys.argv[2]
+    assert R.isdigit(), "R must be an integer"
+    R = int(R)
+
+    # parse data_path
+    data_path = sys.argv[3]
+    assert os.path.isfile(data_path), "File or folder not found"
+
+    rawData = sc.textFile(data_path, minPartitions=C)
+    edges = rawData.map(lambda x: tuple(map(int, x.split(',')))) # convert the string edges into tuple of int
+    edges.repartition(numPartitions=C).cache()
+
+    print(f"File name: {rem_dir(data_path)}\nNumber of partitions C: {C}\nNumber of executions of the second algorithm R: {R}\nNumber of edges: {edges.count()}")
 
 if __name__ == "__main__":
     main()

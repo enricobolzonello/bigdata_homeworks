@@ -18,6 +18,19 @@ import re,sys,os,time,random
 
 P=8191
 
+# utility decorator function to measure the execution time of a function
+# TODO: for the first function they want the average execution time, rn we are outputting each execution
+def timeit(f):
+    def wrap(*args, **kwargs):
+        time1 = time.time()
+        ret = f(*args, **kwargs)
+        time2 = time.time()
+
+        run_time = (time2-time1)*1000.0
+        
+        return (ret, run_time)
+    return wrap
+
 def color_vertices(edge, C, a, b):
     h_u = ((a * edge[0] + b) % P) % C
     h_v = ((a * edge[1] + b) % P) % C
@@ -26,7 +39,7 @@ def color_vertices(edge, C, a, b):
         return (h_u, edge)
     return (-1, edge)   # Invalid edge
 
-#@timeit
+@timeit
 def MR_ApproxTCwithNodeColors(RDD, C):
     """First algorithm for Triangle Counting
 
@@ -78,17 +91,6 @@ def MR_ApproxTCwithSparkPartitions(RDD, C):
     #TODO
     return
 
-# utility function to measure the execution time of a function
-# TODO: for the first function they want the average execution time, rn we are outputting each execution
-def timeit(f):
-    def wrap(*args, **kwargs):
-        time1 = time.time()
-        ret = f(*args, **kwargs)
-        time2 = time.time()
-        print('{:s} function took {:.3f} ms'.format(f.__name__, (time2-time1)*1000.0))
-
-        return ret
-    return wrap
 
 def main():
     # CHECKING NUMBER OF CMD LINE PARAMTERS
@@ -122,12 +124,12 @@ def main():
     _, file_name = os.path.split(data_path)
     print(f"Dataset = {file_name}\nNumber of Edges = {numedges}\nNumber of Colors = {C}\nNumber of Repetitions = {R}")
 
-    sum_triangles = 0
-    sum_time = 0
-    for i in range(0, R):
-        start_time = time.time()
-        sum_triangles += MR_ApproxTCwithNodeColors(edges, C)
-        sum_time += (time.time() - start_time)*1000
+    sum_triangles = sum_time = 0
+    for _ in range(0, R):
+        triangles, time = MR_ApproxTCwithNodeColors(edges, C)
+        sum_triangles += triangles
+        sum_time += time
+    
     print(f"Approximation through node coloring\n- Number of triangles (median over {R} runs) = {int(sum_triangles/R)}\n- Running time (average over {R} runs) = {int(sum_time/R)}")
 
 if __name__ == "__main__":

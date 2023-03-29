@@ -14,7 +14,7 @@ Usage:
 """
 from pyspark import SparkContext, SparkConf
 from CountTriangles import CountTriangles
-import re,sys,os,time,random
+import sys,os,time,random, statistics
 
 P=8191
 
@@ -62,15 +62,14 @@ def MR_ApproxTCwithNodeColors(RDD, C):
     a = random.randint(0, P-1)
     b = random.randint(1, P-1)
 
-    triangle_count = (RDD.flatMap(lambda x : color_vertices(x, C, a, b)) # R1 MAP PHASE -> lavora con liste, quindi possiamo ritornare una lista vuota
-                        .groupByKey()
-                        .flatMap(lambda x : [(0, CountTriangles(x[1]))]) # R1 REDUCE PHASE
-                        .reduceByKey(lambda x,y : x + y)) #R2 REDUCE PHASE
+    triangle_count = (RDD.flatMap(lambda x : color_vertices(x, C, a, b))    # <--- MAP PHASE (R1)
+                        .groupByKey()                                       # <--- SHUFFLE AND GROUPING (R1)
+                        .flatMap(lambda x : [(0, CountTriangles(x[1]))])    # <--- REDUCE PHASE (R1)
+                        .reduceByKey(lambda x,y : x + y))                   # <--- REDUCE PHASE (R2)
 
+    return (C**2)*(triangle_count.collect()[0][1])
 
-    return (C**2)*triangle_count.collect()[0][1]
-
-#@timeit
+@timeit
 def MR_ApproxTCwithSparkPartitions(RDD, C):
     """Second Algorithm for Triangle Counting
 
@@ -124,13 +123,16 @@ def main():
     _, file_name = os.path.split(data_path)
     print(f"Dataset = {file_name}\nNumber of Edges = {numedges}\nNumber of Colors = {C}\nNumber of Repetitions = {R}")
 
-    sum_triangles = sum_time = 0
+    sum_time = 0
+    runs_triangles = []
     for _ in range(0, R):
         triangles, time = MR_ApproxTCwithNodeColors(edges, C)
-        sum_triangles += triangles
+        runs_triangles.append(triangles)
         sum_time += time
     
-    print(f"Approximation through node coloring\n- Number of triangles (median over {R} runs) = {int(sum_triangles/R)}\n- Running time (average over {R} runs) = {int(sum_time/R)}")
+    print(f"Approximation through node coloring\n"
+          f"- Number of triangles (median over {R} runs) = {statistics.median(runs_triangles)}\n"
+          f"- Running time (average over {R} runs) = {int(sum_time/R)} ms")
 
 if __name__ == "__main__":
     main()

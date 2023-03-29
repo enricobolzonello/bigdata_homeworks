@@ -13,7 +13,7 @@ Both algorithms use an integer parameter $C\ge 1$, which is used to partition th
 
 ### ALGORITHM 1: 
 Define a hash function ℎ𝐶 which maps each vertex 𝑢 in 𝑉 into a color $h_C(u)$ in $[0,C-1]$. To this purpose, we advise you to use the hash function
-$$h_C(u)=(((a\cdot u+b)\% p)\% C)$$
+$$h_C(u)=(((a\cdot u+b)% p)% C)$$
 where $p=8191$ (which is prime), $a$ is a random integer in $[1,p-1]$, and $b$ is a random integer in $[0,p-1]$.
 
 ##### Round 1:

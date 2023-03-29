@@ -23,8 +23,8 @@ def color_vertices(edge, C, a, b):
     h_v = ((a * edge[1] + b) % P) % C
     
     if h_u == h_v:
-        return (h_u, edge)
-    return (-1, edge)
+        return [(h_u, edge)]
+    return []
 
 #@timeit
 def MR_ApproxTCwithNodeColors(RDD, C):
@@ -49,11 +49,12 @@ def MR_ApproxTCwithNodeColors(RDD, C):
     a = random.randint(0, P-1)
     b = random.randint(1, P-1)
 
-    triangle_count = (RDD.map(lambda x : color_vertices(x, C, a, b)) # R1 MAP PHASE
+    triangle_count = (RDD.flatMap(lambda x : color_vertices(x, C, a, b)) # R1 MAP PHASE -> lavora con liste, quindi possiamo ritornare una lista vuota
                         .groupByKey()
-                        .filter(lambda x : x[0] != -1) # R1 SHUFFLE + GROUPING
                         .flatMap(lambda x : [(0, CountTriangles(list(x[1])))]) # R1 REDUCE PHASE
                         .reduceByKey(lambda x,y : x+y)) #R2 REDUCE PHASE
+
+    #.filter(lambda x : x[0] != -1) # R1 SHUFFLE + GROUPING
 
     return C**2*triangle_count.collect()[0][1]
 

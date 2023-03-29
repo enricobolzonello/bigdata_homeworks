@@ -20,7 +20,7 @@ where $p=8191$ (which is prime), $a$ is a random integer in $[1,p-1]$, and $b$ i
 * Create $C$ subsets of edges, where, for $0\le i<C$, the i-th subset, $E(i)$ consist of all edges $(u,v)\in E$ such that $h_C(u)=h_C(v)=i$. Note that if the two endpoints of an edge have different colors, the edge does not belong to any $E(i)$ and will be ignored by the algorithm.
 * Compute the number $t(i)$ triangles formed by edges of $E(i)$, separately for each $0\le i<C$.
 #####Round 2: 
-* Compute and return $t_{final}=C^2\sum_{0\le i<C}t(i)$ as final estimate of the number of triangles in $G$.
+* Compute and return $t_{final}=C^2\sum_{0< i<C}t(i)$ as final estimate of the number of triangles in $G$.
 
 In the homework you must develop an implementation of this algorithm as a method/function `MR_ApproxTCwithNodeColors`.
 

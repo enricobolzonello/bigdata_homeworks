@@ -24,7 +24,7 @@ def color_vertices(edge, C, a, b):
     
     if h_u == h_v:
         return (h_u, edge)
-    return (-1, edge)
+    return (-1, edge)   # Invalid edge
 
 #@timeit
 def MR_ApproxTCwithNodeColors(RDD, C):
@@ -49,13 +49,13 @@ def MR_ApproxTCwithNodeColors(RDD, C):
     a = random.randint(0, P-1)
     b = random.randint(1, P-1)
 
-    triangle_count = (RDD.map(lambda x : color_vertices(x, C, a, b)) # R1 MAP PHASE
-                        .groupByKey()
-                        .filter(lambda x : x[0] != -1) # R1 SHUFFLE + GROUPING
-                        .flatMap(lambda x : [(0, CountTriangles(list(x[1])))]) # R1 REDUCE PHASE
-                        .reduceByKey(lambda x,y : x+y)) #R2 REDUCE PHASE
+    triangle_count = (RDD.map(lambda x : color_vertices(x, C, a, b))       # <--- MAP PHASE (R1)
+                        .groupByKey()                                      # <--- SHUFFLE + GROUPING (R1)
+                        .filter(lambda x : x[0] != -1)                     # <--- INVALID EDGES FILTERING
+                        .flatMap(lambda x : [(0, CountTriangles(list(x[1])))])   # <--- REDUCE PHASE (R1)
+                        .reduceByKey(lambda x, y : x + y))                 # <--- REDUCE PHASE (R2)
 
-    return C**2*triangle_count.collect()[0][1]
+    return (C**2)*(triangle_count.collect()[0][1])
 
 #@timeit
 def MR_ApproxTCwithSparkPartitions(RDD, C):
@@ -128,7 +128,7 @@ def main():
         start_time = time.time()
         sum_triangles += MR_ApproxTCwithNodeColors(edges, C)
         sum_time += (time.time() - start_time)*1000
-    print(f"Approximation through node coloring\n- Number of triangles (median over {R} runs) = {int(sum_triangles/R)}\n - Running time (average over {R} runs) = {int(sum_time/R)}")
+    print(f"Approximation through node coloring\n- Number of triangles (median over {R} runs) = {int(sum_triangles/R)}\n- Running time (average over {R} runs) = {int(sum_time/R)}")
 
 if __name__ == "__main__":
     main()

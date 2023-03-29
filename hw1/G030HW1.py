@@ -52,7 +52,7 @@ def MR_ApproxTCwithNodeColors(RDD, C):
     triangle_count = (RDD.map(lambda x : color_vertices(x, C, a, b))       # <--- MAP PHASE (R1)
                         .groupByKey()                                      # <--- SHUFFLE + GROUPING (R1)
                         .filter(lambda x : x[0] != -1)                     # <--- INVALID EDGES FILTERING
-                        .flatMap(lambda x : [(0, CountTriangles(list(x[1])))])   # <--- REDUCE PHASE (R1)
+                        .flatMap(lambda x : [(0, CountTriangles(x[1]))])   # <--- REDUCE PHASE (R1)
                         .reduceByKey(lambda x, y : x + y))                 # <--- REDUCE PHASE (R2)
 
     return (C**2)*(triangle_count.collect()[0][1])

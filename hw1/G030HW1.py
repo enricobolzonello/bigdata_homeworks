@@ -14,7 +14,7 @@ Usage:
 """
 from pyspark import SparkContext, SparkConf
 from CountTriangles import CountTriangles
-import sys,os,time,random
+import sys,os,time,random, statistics
 
 P=8191
 

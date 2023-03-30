@@ -65,9 +65,9 @@ def MR_ApproxTCwithNodeColors(RDD, C):
     triangle_count = (RDD.flatMap(lambda x : color_vertices(x, C, a, b)) # R1 MAP PHASE
                         .groupByKey()
                         .flatMap(lambda x : [(DEFAULT_KEY, CountTriangles(x[1]))]) # R1 REDUCE PHASE
-                        .reduceByKey(lambda x,y : (C**2)*(x + y))) #R2 REDUCE PHASE
+                        .reduceByKey(lambda x,y : (x + y))) #R2 REDUCE PHASE
 
-    return triangle_count.take(1)[0][1]
+    return (C**2)*triangle_count.take(1)[0][1]
 
 @timeit
 def MR_ApproxTCwithSparkPartitions(RDD, C):
@@ -87,10 +87,9 @@ def MR_ApproxTCwithSparkPartitions(RDD, C):
 
         Raises:
     """
-    triangle_count = (RDD.repartition(numPartitions=C)
-                    .mapPartitions(lambda x : [(DEFAULT_KEY,CountTriangles(x))])
-                    .reduceByKey(lambda x,y : (C**2)*(x+y)))
-    return triangle_count.take(1)[0][1]
+    triangle_count = (RDD.mapPartitions(lambda x : [(DEFAULT_KEY,CountTriangles(x))])
+                    .reduceByKey(lambda x,y : (x+y)))
+    return (C**2)*triangle_count.take(1)[0][1]
 
 def main():
     # CHECKING NUMBER OF CMD LINE PARAMTERS
@@ -117,8 +116,8 @@ def main():
     assert os.path.isfile(data_path), "File or folder not found"
 
     rawData = sc.textFile(data_path, minPartitions=C)
-    edges = rawData.map(lambda x: tuple(map(int, x.split(',')))) # convert the string edges into tuple of int
-    edges.repartition(numPartitions=C).cache()
+    edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).cache() # convert the string edges into tuple of int
+    edges.repartition(numPartitions=C)
     numedges = edges.count()
 
     _, file_name = os.path.split(data_path)

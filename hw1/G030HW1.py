@@ -66,7 +66,7 @@ def MR_ApproxTCwithNodeColors(RDD, C):
                         .flatMap(lambda x : [(0, CountTriangles(x[1]))])    # <--- REDUCE PHASE (R1)
                         .reduceByKey(lambda x, y : x + y))                  # <--- REDUCE PHASE (R2)
 
-    return (C**2)*(triangle_count.collect()[0][1])
+    return (C**2)*(triangle_count.values().first())
 
 @timeit
 def MR_ApproxTCwithSparkPartitions(RDD, C):
@@ -89,7 +89,7 @@ def MR_ApproxTCwithSparkPartitions(RDD, C):
     triangle_count = (RDD.mapPartitions(lambda x : [(0, CountTriangles(x))])   # <--- MAP AND REDUCE (R1)
                         .reduceByKey(lambda x, y : x + y))                     # <--- REDUCE PHASE (R2)
 
-    return (C**2)*(triangle_count.collect()[0][1])
+    return (C**2)*(triangle_count.values().first())
 
 
 def main():

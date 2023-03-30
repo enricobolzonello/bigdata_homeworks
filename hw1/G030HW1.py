@@ -17,6 +17,7 @@ from CountTriangles import CountTriangles
 import sys,os,time,random, statistics
 
 P=8191
+DEFAULT_KEY = 0
 
 # utility function to measure the execution time of a function
 def timeit(f):
@@ -63,7 +64,7 @@ def MR_ApproxTCwithNodeColors(RDD, C):
 
     triangle_count = (RDD.flatMap(lambda x : color_vertices(x, C, a, b)) # R1 MAP PHASE
                         .groupByKey()
-                        .flatMap(lambda x : [(0, CountTriangles(x[1]))]) # R1 REDUCE PHASE
+                        .flatMap(lambda x : [(DEFAULT_KEY, CountTriangles(x[1]))]) # R1 REDUCE PHASE
                         .reduceByKey(lambda x,y : x + y)) #R2 REDUCE PHASE
 
     return (C**2)*triangle_count.collect()[0][1]
@@ -86,8 +87,10 @@ def MR_ApproxTCwithSparkPartitions(RDD, C):
 
         Raises:
     """
-    #TODO
-    return
+    triangle_count = (RDD.repartition(numPartitions=C)
+                    .mapPartitions(lambda x : [(DEFAULT_KEY,CountTriangles(x))])
+                    .reduceByKey(lambda x,y : x+y))
+    return (C**2)*triangle_count.collect()[0][1]
 
 def main():
     # CHECKING NUMBER OF CMD LINE PARAMTERS
@@ -131,6 +134,13 @@ def main():
     print(f"Approximation through node coloring\n"
           f"- Number of triangles (median over {R} runs) = {statistics.median(runs_triangles)}\n"
           f"- Running time (average over {R} runs) = {int(sum_time/R)} ms")
+
+    triangles_partitions, time_partitions = MR_ApproxTCwithSparkPartitions(edges, C)
+
+
+    print(f"Approximation through Spark partitions\n"
+          f"- Number of triangles = {triangles_partitions}\n"
+          f"- Running time = {int(time_partitions)} ms")
 
 if __name__ == "__main__":
     main()

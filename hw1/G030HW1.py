@@ -86,8 +86,8 @@ def MR_ApproxTCwithSparkPartitions(RDD, C):
 
         Raises:
     """
-    triangle_count = (RDD.mapPartitions(lambda x : [(0, CountTriangles(x))])
-                        .reduceByKey(lambda x, y : x + y))                   # <--- REDUCE PHASE (R2)
+    triangle_count = (RDD.mapPartitions(lambda x : [(0, CountTriangles(x))])   # <--- MAP AND REDUCE (R1)
+                        .reduceByKey(lambda x, y : x + y))                     # <--- REDUCE PHASE (R2)
 
     return (C**2)*(triangle_count.collect()[0][1])
 
@@ -118,8 +118,7 @@ def main():
 
     # RDD inital setup
     rawData = sc.textFile(data_path, minPartitions=C)
-    edges = rawData.map(lambda x: tuple(map(int, x.split(',')))) # convert the string edges into tuple of int
-    edges.repartition(numPartitions=C).cache()
+    edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).repartition(numPartitions=C).cache() # converts the string edges into tuple of int and repartitions the RDD
     numedges = edges.count()
 
     # algorithm 1 - MR_ApproxTCwithNodeColors
@@ -140,12 +139,12 @@ def main():
           f"Number of Repetitions = {R}")
 
     print(f"Approximation through node coloring\n"
-          f"- Number of triangles (median over {R} runs) = {statistics.median(sum_triangles)}\n"
+          f"- Number of triangles (median over {R} runs) = {int(statistics.median(sum_triangles))}\n"
           f"- Running time (average over {R} runs) = {int(sum_time/R)} ms")
 
     print(f"Approximation through Spark partitions\n"
           f"- Number of triangles = {triangles}\n"
-          f"- Running time = {time} ms")
+          f"- Running time = {int(time)} ms")
 
 if __name__ == "__main__":
     main()

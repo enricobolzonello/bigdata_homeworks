@@ -3,14 +3,14 @@ from collections import defaultdict
 def CountTriangles(edges):
     # Create a defaultdict to store the neighbors of each vertex
     neighbors = defaultdict(set)
-    c = 0
     for edge in edges:
         u, v = edge
         neighbors[u].add(v)
         neighbors[v].add(u)
-        c = c+1
+
     # Initialize the triangle count to zero
     triangle_count = 0
+
     # Iterate over each vertex in the graph.
     # To avoid duplicates, we count a triangle <u, v, w> only if u<v<w
     for u in neighbors:
@@ -22,5 +22,4 @@ def CountTriangles(edges):
                     if w > v and w in neighbors[u]:
                         triangle_count += 1
     # Return the total number of triangles in the graph
-    print("Size: ", c, "Count: ", triangle_count)
     return triangle_count

@@ -19,7 +19,6 @@ import sys,os,time,random, statistics
 P=8191
 
 # utility decorator function to measure the execution time of a function
-# TODO: for the first function they want the average execution time, rn we are outputting each execution
 def timeit(f):
     def wrap(*args, **kwargs):
         time1 = time.time()
@@ -65,7 +64,7 @@ def MR_ApproxTCwithNodeColors(RDD, C):
     triangle_count = (RDD.flatMap(lambda x : color_vertices(x, C, a, b))    # <--- MAP PHASE (R1)
                         .groupByKey()                                       # <--- SHUFFLE AND GROUPING (R1)
                         .flatMap(lambda x : [(0, CountTriangles(x[1]))])    # <--- REDUCE PHASE (R1)
-                        .reduceByKey(lambda x,y : x + y))                   # <--- REDUCE PHASE (R2)
+                        .reduceByKey(lambda x, y : x + y))                  # <--- REDUCE PHASE (R2)
 
     return (C**2)*(triangle_count.collect()[0][1])
 
@@ -87,15 +86,17 @@ def MR_ApproxTCwithSparkPartitions(RDD, C):
 
         Raises:
     """
-    #TODO
-    return
+    triangle_count = (RDD.mapPartitions(lambda x : [(0, CountTriangles(x))])
+                        .reduceByKey(lambda x, y : x + y))                   # <--- REDUCE PHASE (R2)
+
+    return (C**2)*(triangle_count.collect()[0][1])
 
 
 def main():
-    # CHECKING NUMBER OF CMD LINE PARAMTERS
+    # checking number of cmd line parameters
     assert len(sys.argv) == 4, "Usage: python GO30HW1.py <C> <R> <path/file_name>"
 
-	# SPARK SETUP
+	# Spark setup
     conf = SparkConf().setAppName('TriangleCounting')
     sc = SparkContext(conf=conf)
 
@@ -115,24 +116,36 @@ def main():
     data_path = sys.argv[3]
     assert os.path.isfile(data_path), "File or folder not found"
 
+    # RDD inital setup
     rawData = sc.textFile(data_path, minPartitions=C)
     edges = rawData.map(lambda x: tuple(map(int, x.split(',')))) # convert the string edges into tuple of int
     edges.repartition(numPartitions=C).cache()
     numedges = edges.count()
 
-    _, file_name = os.path.split(data_path)
-    print(f"Dataset = {file_name}\nNumber of Edges = {numedges}\nNumber of Colors = {C}\nNumber of Repetitions = {R}")
-
+    # algorithm 1 - MR_ApproxTCwithNodeColors
     sum_time = 0
-    runs_triangles = []
+    sum_triangles = []
     for _ in range(0, R):
         triangles, time = MR_ApproxTCwithNodeColors(edges, C)
-        runs_triangles.append(triangles)
+        sum_triangles.append(triangles)
         sum_time += time
     
+    # algorithm 2 - MR_ApproxTCwithSparkPartitions
+    triangles, time = MR_ApproxTCwithSparkPartitions(edges, C)
+
+    _, file_name = os.path.split(data_path)
+    print(f"Dataset = {file_name}\n"
+          f"Number of Edges = {numedges}\n"
+          f"Number of Colors = {C}\n"
+          f"Number of Repetitions = {R}")
+
     print(f"Approximation through node coloring\n"
-          f"- Number of triangles (median over {R} runs) = {statistics.median(runs_triangles)}\n"
+          f"- Number of triangles (median over {R} runs) = {statistics.median(sum_triangles)}\n"
           f"- Running time (average over {R} runs) = {int(sum_time/R)} ms")
+
+    print(f"Approximation through Spark partitions\n"
+          f"- Number of triangles = {triangles}\n"
+          f"- Running time = {time} ms")
 
 if __name__ == "__main__":
     main()

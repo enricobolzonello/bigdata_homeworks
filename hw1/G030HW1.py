@@ -96,7 +96,7 @@ def main():
     assert len(sys.argv) == 4, "Usage: python GO30HW1.py <C> <R> <path/file_name>"
 
 	# SPARK SETUP
-    conf = SparkConf().setAppName('TriangleCounting')
+    conf = SparkConf().setAppName('G030HW1')
     sc = SparkContext(conf=conf)
 
     # parse C parameter
@@ -115,9 +115,16 @@ def main():
     data_path = sys.argv[3]
     assert os.path.isfile(data_path), "File or folder not found"
 
+    # code to random shuffle the edges in the input file
+    '''
+    lines = open(data_path).readlines()
+    random.shuffle(lines)
+    data_path = data_path.replace(".txt", "_permuted.txt")
+    open(data_path, 'w').writelines(lines)
+    #---------'''
+
     rawData = sc.textFile(data_path, minPartitions=C)
-    edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).cache() # convert the string edges into tuple of int
-    edges.repartition(numPartitions=C)
+    edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).repartition(numPartitions=C).cache()
     numedges = edges.count()
 
     _, file_name = os.path.split(data_path)
@@ -135,7 +142,6 @@ def main():
           f"- Running time (average over {R} runs) = {int(sum_time/R)} ms")
 
     triangles_partitions, time_partitions = MR_ApproxTCwithSparkPartitions(edges, C)
-
 
     print(f"Approximation through Spark partitions\n"
           f"- Number of triangles = {triangles_partitions}\n"

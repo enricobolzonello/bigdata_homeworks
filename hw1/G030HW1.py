@@ -116,6 +116,13 @@ def main():
     data_path = sys.argv[3]
     assert os.path.isfile(data_path), "File or folder not found"
 
+    #---------
+    lines = open(data_path).readlines()
+    random.shuffle(lines)
+    data_path = data_path.replace(".txt", "_permuted.txt")
+    open(data_path, 'w').writelines(lines)
+    #---------
+    
     # RDD inital setup
     rawData = sc.textFile(data_path, minPartitions=C)
     edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).repartition(numPartitions=C).cache() # converts the string edges into tuple of int and repartitions the RDD

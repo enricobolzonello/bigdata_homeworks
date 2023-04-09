@@ -62,10 +62,10 @@ def MR_ApproxTCwithNodeColors(RDD, C):
     a = random.randint(0, P-1)
     b = random.randint(1, P-1)
 
-    triangle_count = (RDD.flatMap(lambda x : color_vertices(x, C, a, b)) # R1 MAP PHASE
-                        .groupByKey()
-                        .flatMap(lambda x : [(DEFAULT_KEY, CountTriangles(x[1]))]) # R1 REDUCE PHASE
-                        .reduceByKey(lambda x,y : (x + y))) #R2 REDUCE PHASE
+    triangle_count = (RDD.flatMap(lambda x : color_vertices(x, C, a, b))                # <--- MAP PHASE (R1)
+                        .groupByKey()                                                   # <--- SHUFFLE AND GROUPING (R1)
+                        .flatMap(lambda x : [(DEFAULT_KEY, CountTriangles(x[1]))])      # <--- REDUCE PHASE (R1)
+                        .reduceByKey(lambda x,y : (x + y)))                             # <--- REDUCE PHASE (R2)
 
     return (C**2)*triangle_count.take(1)[0][1]
 
@@ -87,15 +87,17 @@ def MR_ApproxTCwithSparkPartitions(RDD, C):
 
         Raises:
     """
-    triangle_count = (RDD.mapPartitions(lambda x : [(DEFAULT_KEY,CountTriangles(x))])
-                    .reduceByKey(lambda x,y : (x+y)))
+    triangle_count = (RDD.mapPartitions(lambda x : [(DEFAULT_KEY,CountTriangles(x))])   # <--- MAP AND REDUCE (R1)
+                        .reduceByKey(lambda x,y : (x+y)))                               # <--- REDUCE PHASE (R2)
+    
     return (C**2)*triangle_count.take(1)[0][1]
 
+
 def main():
-    # CHECKING NUMBER OF CMD LINE PARAMTERS
+    # checking number of cmd line parameters
     assert len(sys.argv) == 4, "Usage: python GO30HW1.py <C> <R> <path/file_name>"
 
-	# SPARK SETUP
+	# Spark setup
     conf = SparkConf().setAppName('G030HW1')
     sc = SparkContext(conf=conf)
 
@@ -114,14 +116,6 @@ def main():
     # parse data_path
     data_path = sys.argv[3]
     assert os.path.isfile(data_path), "File or folder not found"
-
-    # code to random shuffle the edges in the input file
-    '''
-    lines = open(data_path).readlines()
-    random.shuffle(lines)
-    data_path = data_path.replace(".txt", "_permuted.txt")
-    open(data_path, 'w').writelines(lines)
-    #---------'''
 
     rawData = sc.textFile(data_path, minPartitions=C)
     edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).repartition(numPartitions=C).cache()

@@ -78,10 +78,6 @@ def create_pairs(edge, C, a, b):
     
     pairs = []
     for i in range(0, C):
-        '''s = ""
-        for l in sorted((h_u,h_v,i)):
-            s = s + l
-        pairs.append((l, edge))'''
         pairs.append((tuple(sorted((h_u,h_v,i))), edge))
         
     return pairs
@@ -143,16 +139,16 @@ def main():
 
     # parse data_path
     data_path = sys.argv[4]
-    if not os.path.isfile(data_path):
-        print("File or folder not found")
-        return
+    #if not os.path.isfile(data_path):
+    #    print("File or folder not found")
+    #    return
 
     rawData = sc.textFile(data_path, minPartitions=16)
     edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).repartition(numPartitions=16).cache()
     numedges = edges.count()
 
     _, file_name = os.path.split(data_path)
-    print(f"Dataset = {file_name}\nNumber of Edges = {numedges}\nNumber of Colors = {C}\nNumber of Repetitions = {R}")
+    print("Dataset = %s\nNumber of Edges = %d\nNumber of Colors = %d\nNumber of Repetitions = %d" % (file_name, numedges, C, R))
 
     sum_time = 0
     runs_triangles = []
@@ -162,17 +158,19 @@ def main():
             runs_triangles.append(triangles)
             sum_time += time
     
-        print(f"Approximation through node coloring\n"
-            f"- Number of triangles (median over {R} runs) = {statistics.median(runs_triangles)}\n"
-            f"- Running time (average over {R} runs) = {int(sum_time/R)} ms")
+        print("Approximation through node coloring\n"
+            "- Number of triangles (median over %d runs) = %f\n"
+            "- Running time (average over %d runs) = %d ms" 
+            % (R, statistics.median(runs_triangles), R, int(sum_time/R)))
     elif F == 1:
         for _ in range(0,R):
             triangles, time = MR_ExactTC(edges, C)
             sum_time += time
         
-        print(f"Exact algorithm with node coloring\n"
-            f"- Number of triangles = {triangles}\n"
-            f"- Running time (average over {R} runs) = {int(sum_time/R)} ms")
+        print("Exact algorithm with node coloring\n"
+            "- Number of triangles = %d\n"
+            "- Running time (average over %d runs) = %d ms"
+            % (triangles, R, int(sum_time/R)))
 
 
 if __name__ == "__main__":

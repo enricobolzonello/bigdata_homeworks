@@ -139,12 +139,9 @@ def main():
 
     # parse data_path
     data_path = sys.argv[4]
-    #if not os.path.isfile(data_path):
-    #    print("File or folder not found")
-    #    return
 
-    rawData = sc.textFile(data_path, minPartitions=16)
-    edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).repartition(numPartitions=16).cache()
+    rawData = sc.textFile(data_path, minPartitions=32)
+    edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).repartition(numPartitions=32).cache()
     numedges = edges.count()
 
     _, file_name = os.path.split(data_path)

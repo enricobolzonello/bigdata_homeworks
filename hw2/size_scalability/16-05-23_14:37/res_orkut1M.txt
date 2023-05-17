@@ -1,0 +1,1141 @@
+23/05/16 14:37:03 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/05/16 14:37:04 INFO spark.SparkContext: Running Spark version 2.4.4
+23/05/16 14:37:04 INFO spark.SparkContext: Submitted application: G030HW1
+23/05/16 14:37:04 INFO spark.SecurityManager: Changing view acls to: group030
+23/05/16 14:37:04 INFO spark.SecurityManager: Changing modify acls to: group030
+23/05/16 14:37:04 INFO spark.SecurityManager: Changing view acls groups to: 
+23/05/16 14:37:04 INFO spark.SecurityManager: Changing modify acls groups to: 
+23/05/16 14:37:04 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(group030); groups with view permissions: Set(); users  with modify permissions: Set(group030); groups with modify permissions: Set()
+23/05/16 14:37:04 INFO util.Utils: Successfully started service 'sparkDriver' on port 34978.
+23/05/16 14:37:04 INFO spark.SparkEnv: Registering MapOutputTracker
+23/05/16 14:37:04 INFO spark.SparkEnv: Registering BlockManagerMaster
+23/05/16 14:37:04 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+23/05/16 14:37:04 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+23/05/16 14:37:04 INFO storage.DiskBlockManager: Created local directory at /var/spark/local/blockmgr-cdaee90c-42e4-4a56-a4ff-779d8342218d
+23/05/16 14:37:04 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+23/05/16 14:37:05 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+23/05/16 14:37:05 INFO util.log: Logging initialized @3105ms
+23/05/16 14:37:05 INFO server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+23/05/16 14:37:05 INFO server.Server: Started @3222ms
+23/05/16 14:37:05 WARN util.Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+23/05/16 14:37:05 WARN util.Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+23/05/16 14:37:05 INFO server.AbstractConnector: Started ServerConnector@796e6965{HTTP/1.1,[http/1.1]}{10.67.13.9:4042}
+23/05/16 14:37:05 INFO util.Utils: Successfully started service 'SparkUI' on port 4042.
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2667e2fb{/jobs,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3611835e{/jobs/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6e59d7aa{/jobs/job,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7e324ade{/jobs/job/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@44833d35{/stages,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@64c74688{/stages/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@48c6fa38{/stages/stage,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@27542cdc{/stages/stage/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@58bc1534{/stages/pool,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@d4da77a{/stages/pool/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3ab0c210{/storage,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3c843b56{/storage/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4299c47{/storage/rdd,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@643f8dcf{/storage/rdd/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5823731a{/environment,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4560adc3{/environment/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@d63ca8c{/executors,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@152a7f1a{/executors/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@56d27506{/executors/threadDump,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@169cd4aa{/executors/threadDump/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5385b5f{/static,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@40a68824{/,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5ecd5c40{/api,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6bc353d3{/jobs/job/kill,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3f80e1fd{/stages/stage/kill,null,AVAILABLE,@Spark}
+23/05/16 14:37:05 INFO ui.SparkUI: Bound SparkUI to 10.67.13.9, and started at http://frontend:4042
+23/05/16 14:37:06 INFO client.RMProxy: Connecting to ResourceManager at frontend/10.67.13.9:8032
+23/05/16 14:37:06 INFO yarn.Client: Requesting a new application from cluster with 9 NodeManagers
+23/05/16 14:37:06 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (14336 MB per container)
+23/05/16 14:37:06 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+23/05/16 14:37:06 INFO yarn.Client: Setting up container launch context for our AM
+23/05/16 14:37:06 INFO yarn.Client: Setting up the launch environment for our AM container
+23/05/16 14:37:06 INFO yarn.Client: Preparing resources for our AM container
+23/05/16 14:37:06 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+23/05/16 14:37:13 INFO yarn.Client: Uploading resource file:/var/spark/local/spark-fc846ca1-06b7-48f3-b748-6140bda4861c/__spark_libs__2748391950898282083.zip -> hdfs://frontend:9000/user/group030/.sparkStaging/application_1681722666594_1311/__spark_libs__2748391950898282083.zip
+23/05/16 14:37:14 INFO yarn.Client: Uploading resource file:/opt/spark/python/lib/pyspark.zip -> hdfs://frontend:9000/user/group030/.sparkStaging/application_1681722666594_1311/pyspark.zip
+23/05/16 14:37:15 INFO yarn.Client: Uploading resource file:/opt/spark/python/lib/py4j-0.10.7-src.zip -> hdfs://frontend:9000/user/group030/.sparkStaging/application_1681722666594_1311/py4j-0.10.7-src.zip
+23/05/16 14:37:15 INFO yarn.Client: Uploading resource file:/var/spark/local/spark-fc846ca1-06b7-48f3-b748-6140bda4861c/__spark_conf__8366423463043140614.zip -> hdfs://frontend:9000/user/group030/.sparkStaging/application_1681722666594_1311/__spark_conf__.zip
+23/05/16 14:37:15 INFO spark.SecurityManager: Changing view acls to: group030
+23/05/16 14:37:15 INFO spark.SecurityManager: Changing modify acls to: group030
+23/05/16 14:37:15 INFO spark.SecurityManager: Changing view acls groups to: 
+23/05/16 14:37:15 INFO spark.SecurityManager: Changing modify acls groups to: 
+23/05/16 14:37:15 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(group030); groups with view permissions: Set(); users  with modify permissions: Set(group030); groups with modify permissions: Set()
+23/05/16 14:37:16 INFO yarn.Client: Submitting application application_1681722666594_1311 to ResourceManager
+23/05/16 14:37:17 INFO impl.YarnClientImpl: Submitted application application_1681722666594_1311
+23/05/16 14:37:17 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1681722666594_1311 and attemptId None
+23/05/16 14:37:18 INFO yarn.Client: Application report for application_1681722666594_1311 (state: ACCEPTED)
+23/05/16 14:37:18 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1684247837038
+	 final status: UNDEFINED
+	 tracking URL: http://frontend:8088/proxy/application_1681722666594_1311/
+	 user: group030
+23/05/16 14:37:19 INFO yarn.Client: Application report for application_1681722666594_1311 (state: ACCEPTED)
+23/05/16 14:37:20 INFO yarn.Client: Application report for application_1681722666594_1311 (state: ACCEPTED)
+23/05/16 14:37:21 INFO yarn.Client: Application report for application_1681722666594_1311 (state: ACCEPTED)
+23/05/16 14:37:22 INFO yarn.Client: Application report for application_1681722666594_1311 (state: ACCEPTED)
+23/05/16 14:37:22 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> minion-5, PROXY_URI_BASES -> http://minion-5:8088/proxy/application_1681722666594_1311), /proxy/application_1681722666594_1311
+23/05/16 14:37:22 INFO ui.JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /jobs, /jobs/json, /jobs/job, /jobs/job/json, /stages, /stages/json, /stages/stage, /stages/stage/json, /stages/pool, /stages/pool/json, /storage, /storage/json, /storage/rdd, /storage/rdd/json, /environment, /environment/json, /executors, /executors/json, /executors/threadDump, /executors/threadDump/json, /static, /, /api, /jobs/job/kill, /stages/stage/kill.
+23/05/16 14:37:22 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+23/05/16 14:37:23 INFO yarn.Client: Application report for application_1681722666594_1311 (state: RUNNING)
+23/05/16 14:37:23 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 10.67.13.11
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1684247837038
+	 final status: UNDEFINED
+	 tracking URL: http://frontend:8088/proxy/application_1681722666594_1311/
+	 user: group030
+23/05/16 14:37:23 INFO cluster.YarnClientSchedulerBackend: Application application_1681722666594_1311 has started running.
+23/05/16 14:37:23 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36474.
+23/05/16 14:37:23 INFO netty.NettyBlockTransferService: Server created on frontend:36474
+23/05/16 14:37:23 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+23/05/16 14:37:23 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, frontend, 36474, None)
+23/05/16 14:37:23 INFO storage.BlockManagerMasterEndpoint: Registering block manager frontend:36474 with 366.3 MB RAM, BlockManagerId(driver, frontend, 36474, None)
+23/05/16 14:37:23 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, frontend, 36474, None)
+23/05/16 14:37:23 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, frontend, 36474, None)
+23/05/16 14:37:23 INFO ui.JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+23/05/16 14:37:23 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@652cbb69{/metrics/json,null,AVAILABLE,@Spark}
+23/05/16 14:37:23 INFO scheduler.EventLoggingListener: Logging events to hdfs://frontend:9000/shared/spark-logs/application_1681722666594_1311
+23/05/16 14:37:26 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.67.13.11:45890) with ID 4
+23/05/16 14:37:27 INFO storage.BlockManagerMasterEndpoint: Registering block manager minion-5:44393 with 1048.8 MB RAM, BlockManagerId(4, minion-5, 44393, None)
+23/05/16 14:37:28 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.67.13.8:37830) with ID 2
+23/05/16 14:37:28 INFO storage.BlockManagerMasterEndpoint: Registering block manager minion-2:33496 with 1048.8 MB RAM, BlockManagerId(2, minion-2, 33496, None)
+23/05/16 14:37:28 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.67.13.7:36252) with ID 5
+23/05/16 14:37:28 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.67.13.6:34336) with ID 8
+23/05/16 14:37:28 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.67.13.17:41902) with ID 7
+23/05/16 14:37:28 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.67.13.19:55892) with ID 6
+23/05/16 14:37:28 INFO storage.BlockManagerMasterEndpoint: Registering block manager minion-4:33017 with 1048.8 MB RAM, BlockManagerId(8, minion-4, 33017, None)
+23/05/16 14:37:28 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.67.13.4:47712) with ID 1
+23/05/16 14:37:28 INFO storage.BlockManagerMasterEndpoint: Registering block manager minion-6:33566 with 1048.8 MB RAM, BlockManagerId(5, minion-6, 33566, None)
+23/05/16 14:37:28 INFO storage.BlockManagerMasterEndpoint: Registering block manager minion-8:33799 with 1048.8 MB RAM, BlockManagerId(7, minion-8, 33799, None)
+23/05/16 14:37:28 INFO storage.BlockManagerMasterEndpoint: Registering block manager minion-9:42433 with 1048.8 MB RAM, BlockManagerId(6, minion-9, 42433, None)
+23/05/16 14:37:28 INFO storage.BlockManagerMasterEndpoint: Registering block manager minion-7:39217 with 1048.8 MB RAM, BlockManagerId(1, minion-7, 39217, None)
+23/05/16 14:37:28 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.67.13.12:52088) with ID 3
+23/05/16 14:37:28 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 1.0
+23/05/16 14:37:29 INFO storage.BlockManagerMasterEndpoint: Registering block manager minion-3:32773 with 1048.8 MB RAM, BlockManagerId(3, minion-3, 32773, None)
+23/05/16 14:37:29 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 238.2 KB, free 366.1 MB)
+23/05/16 14:37:29 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.1 KB, free 366.0 MB)
+23/05/16 14:37:29 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on frontend:36474 (size: 23.1 KB, free: 366.3 MB)
+23/05/16 14:37:29 INFO spark.SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+23/05/16 14:37:29 INFO mapred.FileInputFormat: Total input paths to process : 1
+23/05/16 14:37:29 INFO spark.SparkContext: Starting job: count at /home/group030/G030HW2.py:148
+23/05/16 14:37:29 INFO scheduler.DAGScheduler: Registering RDD 3 (coalesce at NativeMethodAccessorImpl.java:0)
+23/05/16 14:37:29 INFO scheduler.DAGScheduler: Got job 0 (count at /home/group030/G030HW2.py:148) with 32 output partitions
+23/05/16 14:37:29 INFO scheduler.DAGScheduler: Final stage: ResultStage 1 (count at /home/group030/G030HW2.py:148)
+23/05/16 14:37:29 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+23/05/16 14:37:29 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+23/05/16 14:37:29 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at coalesce at NativeMethodAccessorImpl.java:0), which has no missing parents
+23/05/16 14:37:30 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 8.2 KB, free 366.0 MB)
+23/05/16 14:37:30 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.0 KB, free 366.0 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on frontend:36474 (size: 5.0 KB, free: 366.3 MB)
+23/05/16 14:37:30 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:30 INFO scheduler.DAGScheduler: Submitting 32 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at coalesce at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/05/16 14:37:30 INFO cluster.YarnScheduler: Adding task set 0.0 with 32 tasks
+23/05/16 14:37:30 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, minion-9, executor 6, partition 0, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:30 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, minion-8, executor 7, partition 1, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:30 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, minion-7, executor 1, partition 2, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:30 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, minion-4, executor 8, partition 3, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:30 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, minion-2, executor 2, partition 4, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:30 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, minion-3, executor 3, partition 5, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:30 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, minion-5, executor 4, partition 6, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:30 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, minion-6, executor 5, partition 7, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on minion-4:33017 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on minion-5:44393 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on minion-6:33566 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on minion-7:39217 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on minion-9:42433 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on minion-8:33799 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on minion-2:33496 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on minion-3:32773 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on minion-4:33017 (size: 23.1 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on minion-5:44393 (size: 23.1 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on minion-7:39217 (size: 23.1 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on minion-6:33566 (size: 23.1 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on minion-9:42433 (size: 23.1 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on minion-3:32773 (size: 23.1 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on minion-2:33496 (size: 23.1 KB, free: 1048.8 MB)
+23/05/16 14:37:30 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on minion-8:33799 (size: 23.1 KB, free: 1048.8 MB)
+23/05/16 14:37:32 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, minion-4, executor 8, partition 8, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:32 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 2734 ms on minion-4 (executor 8) (1/32)
+23/05/16 14:37:32 INFO python.PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 59904
+23/05/16 14:37:32 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, minion-9, executor 6, partition 9, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:32 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2876 ms on minion-9 (executor 6) (2/32)
+23/05/16 14:37:32 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10, minion-7, executor 1, partition 10, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:32 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 2887 ms on minion-7 (executor 1) (3/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11, minion-5, executor 4, partition 11, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 2913 ms on minion-5 (executor 4) (4/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12, minion-8, executor 7, partition 12, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 2953 ms on minion-8 (executor 7) (5/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13, minion-6, executor 5, partition 13, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 2985 ms on minion-6 (executor 5) (6/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14, minion-3, executor 3, partition 14, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 3010 ms on minion-3 (executor 3) (7/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15, minion-2, executor 2, partition 15, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 3044 ms on minion-2 (executor 2) (8/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16, minion-4, executor 8, partition 16, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 334 ms on minion-4 (executor 8) (9/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17, minion-7, executor 1, partition 17, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 340 ms on minion-7 (executor 1) (10/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 0.0 (TID 18, minion-9, executor 6, partition 18, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 391 ms on minion-9 (executor 6) (11/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 0.0 (TID 19, minion-5, executor 4, partition 19, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 374 ms on minion-5 (executor 4) (12/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 0.0 (TID 20, minion-6, executor 5, partition 20, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 326 ms on minion-6 (executor 5) (13/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 0.0 (TID 21, minion-8, executor 7, partition 21, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 395 ms on minion-8 (executor 7) (14/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 0.0 (TID 22, minion-4, executor 8, partition 22, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 0.0 (TID 16) in 294 ms on minion-4 (executor 8) (15/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 0.0 (TID 23, minion-2, executor 2, partition 23, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 357 ms on minion-2 (executor 2) (16/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 0.0 (TID 24, minion-3, executor 3, partition 24, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 415 ms on minion-3 (executor 3) (17/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 0.0 (TID 25, minion-9, executor 6, partition 25, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 0.0 (TID 18) in 264 ms on minion-9 (executor 6) (18/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 0.0 (TID 26, minion-7, executor 1, partition 26, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 0.0 (TID 17) in 280 ms on minion-7 (executor 1) (19/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 0.0 (TID 27, minion-6, executor 5, partition 27, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 0.0 (TID 20) in 278 ms on minion-6 (executor 5) (20/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 0.0 (TID 28, minion-8, executor 7, partition 28, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 0.0 (TID 21) in 263 ms on minion-8 (executor 7) (21/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 0.0 (TID 29, minion-4, executor 8, partition 29, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 0.0 (TID 22) in 282 ms on minion-4 (executor 8) (22/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 0.0 (TID 30, minion-5, executor 4, partition 30, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 0.0 (TID 19) in 385 ms on minion-5 (executor 4) (23/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 0.0 (TID 31, minion-2, executor 2, partition 31, RACK_LOCAL, 7905 bytes)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 0.0 (TID 23) in 286 ms on minion-2 (executor 2) (24/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 0.0 (TID 24) in 299 ms on minion-3 (executor 3) (25/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 0.0 (TID 26) in 252 ms on minion-7 (executor 1) (26/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 0.0 (TID 25) in 268 ms on minion-9 (executor 6) (27/32)
+23/05/16 14:37:33 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 0.0 (TID 28) in 248 ms on minion-8 (executor 7) (28/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 0.0 (TID 29) in 277 ms on minion-4 (executor 8) (29/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 0.0 (TID 30) in 269 ms on minion-5 (executor 4) (30/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 0.0 (TID 27) in 379 ms on minion-6 (executor 5) (31/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 0.0 (TID 31) in 284 ms on minion-2 (executor 2) (32/32)
+23/05/16 14:37:34 INFO cluster.YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: ShuffleMapStage 0 (coalesce at NativeMethodAccessorImpl.java:0) finished in 4.062 s
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: looking for newly runnable stages
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: running: Set()
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 1)
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: failed: Set()
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Submitting ResultStage 1 (PythonRDD[7] at count at /home/group030/G030HW2.py:148), which has no missing parents
+23/05/16 14:37:34 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 7.9 KB, free 366.0 MB)
+23/05/16 14:37:34 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.0 KB, free 366.0 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on frontend:36474 (size: 5.0 KB, free: 366.3 MB)
+23/05/16 14:37:34 INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Submitting 32 missing tasks from ResultStage 1 (PythonRDD[7] at count at /home/group030/G030HW2.py:148) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/05/16 14:37:34 INFO cluster.YarnScheduler: Adding task set 1.0 with 32 tasks
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 32, minion-2, executor 2, partition 0, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 1.0 (TID 33, minion-7, executor 1, partition 1, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 1.0 (TID 34, minion-6, executor 5, partition 2, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 1.0 (TID 35, minion-5, executor 4, partition 3, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 1.0 (TID 36, minion-3, executor 3, partition 4, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 1.0 (TID 37, minion-8, executor 7, partition 5, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 1.0 (TID 38, minion-9, executor 6, partition 6, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 1.0 (TID 39, minion-4, executor 8, partition 7, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on minion-2:33496 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on minion-7:39217 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on minion-5:44393 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on minion-4:33017 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on minion-9:42433 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on minion-3:32773 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on minion-6:33566 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:34 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.67.13.11:45890
+23/05/16 14:37:34 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.67.13.4:47712
+23/05/16 14:37:34 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.67.13.6:34336
+23/05/16 14:37:34 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.67.13.19:55892
+23/05/16 14:37:34 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.67.13.12:52088
+23/05/16 14:37:34 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.67.13.7:36252
+23/05/16 14:37:34 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.67.13.8:37830
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on minion-8:33799 (size: 5.0 KB, free: 1048.8 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_3 in memory on minion-5:44393 (size: 278.0 KB, free: 1048.5 MB)
+23/05/16 14:37:34 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.67.13.17:41902
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_7 in memory on minion-4:33017 (size: 277.9 KB, free: 1048.5 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_0 in memory on minion-2:33496 (size: 277.8 KB, free: 1048.5 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_6 in memory on minion-9:42433 (size: 277.6 KB, free: 1048.5 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 1.0 (TID 40, minion-5, executor 4, partition 8, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 1.0 (TID 35) in 289 ms on minion-5 (executor 4) (1/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 1.0 (TID 41, minion-4, executor 8, partition 9, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 1.0 (TID 39) in 289 ms on minion-4 (executor 8) (2/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_2 in memory on minion-6:33566 (size: 277.6 KB, free: 1048.5 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_1 in memory on minion-7:39217 (size: 277.3 KB, free: 1048.5 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_4 in memory on minion-3:32773 (size: 277.4 KB, free: 1048.5 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 1.0 (TID 42, minion-2, executor 2, partition 10, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 32) in 332 ms on minion-2 (executor 2) (3/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 1.0 (TID 43, minion-9, executor 6, partition 11, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 1.0 (TID 38) in 330 ms on minion-9 (executor 6) (4/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_9 in memory on minion-4:33017 (size: 277.9 KB, free: 1048.2 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 1.0 (TID 44, minion-7, executor 1, partition 12, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 1.0 (TID 33) in 354 ms on minion-7 (executor 1) (5/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 1.0 (TID 45, minion-3, executor 3, partition 13, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 1.0 (TID 36) in 370 ms on minion-3 (executor 3) (6/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 1.0 (TID 46, minion-6, executor 5, partition 14, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 1.0 (TID 34) in 377 ms on minion-6 (executor 5) (7/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_11 in memory on minion-9:42433 (size: 277.7 KB, free: 1048.2 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_10 in memory on minion-2:33496 (size: 278.1 KB, free: 1048.2 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_8 in memory on minion-5:44393 (size: 277.6 KB, free: 1048.2 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 1.0 (TID 47, minion-4, executor 8, partition 15, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 1.0 (TID 41) in 103 ms on minion-4 (executor 8) (8/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_12 in memory on minion-7:39217 (size: 277.5 KB, free: 1048.2 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 1.0 (TID 48, minion-9, executor 6, partition 16, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 1.0 (TID 43) in 91 ms on minion-9 (executor 6) (9/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_14 in memory on minion-6:33566 (size: 277.9 KB, free: 1048.2 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 1.0 (TID 49, minion-2, executor 2, partition 17, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 1.0 (TID 42) in 112 ms on minion-2 (executor 2) (10/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_15 in memory on minion-4:33017 (size: 277.6 KB, free: 1048.0 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 1.0 (TID 50, minion-7, executor 1, partition 18, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 1.0 (TID 44) in 92 ms on minion-7 (executor 1) (11/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_13 in memory on minion-3:32773 (size: 278.0 KB, free: 1048.2 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 1.0 (TID 51, minion-5, executor 4, partition 19, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 1.0 (TID 40) in 160 ms on minion-5 (executor 4) (12/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 1.0 (TID 52, minion-6, executor 5, partition 20, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 1.0 (TID 46) in 93 ms on minion-6 (executor 5) (13/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_16 in memory on minion-9:42433 (size: 278.3 KB, free: 1048.0 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_5 in memory on minion-8:33799 (size: 277.7 KB, free: 1048.5 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 1.0 (TID 53, minion-4, executor 8, partition 21, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 1.0 (TID 47) in 81 ms on minion-4 (executor 8) (14/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_17 in memory on minion-2:33496 (size: 278.2 KB, free: 1048.0 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_18 in memory on minion-7:39217 (size: 277.8 KB, free: 1048.0 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 1.0 (TID 54, minion-9, executor 6, partition 22, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 1.0 (TID 48) in 92 ms on minion-9 (executor 6) (15/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 1.0 (TID 55, minion-8, executor 7, partition 23, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 1.0 (TID 37) in 514 ms on minion-8 (executor 7) (16/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 1.0 (TID 56, minion-2, executor 2, partition 24, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 1.0 (TID 49) in 84 ms on minion-2 (executor 2) (17/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_19 in memory on minion-5:44393 (size: 277.7 KB, free: 1048.0 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_20 in memory on minion-6:33566 (size: 277.4 KB, free: 1048.0 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 1.0 (TID 57, minion-3, executor 3, partition 25, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 1.0 (TID 45) in 189 ms on minion-3 (executor 3) (18/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 1.0 (TID 58, minion-7, executor 1, partition 26, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 1.0 (TID 50) in 117 ms on minion-7 (executor 1) (19/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_21 in memory on minion-4:33017 (size: 277.4 KB, free: 1047.7 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_23 in memory on minion-8:33799 (size: 277.1 KB, free: 1048.2 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_22 in memory on minion-9:42433 (size: 277.7 KB, free: 1047.7 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 1.0 (TID 59, minion-6, executor 5, partition 27, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 1.0 (TID 52) in 112 ms on minion-6 (executor 5) (20/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_24 in memory on minion-2:33496 (size: 277.2 KB, free: 1047.7 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 1.0 (TID 60, minion-4, executor 8, partition 28, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 1.0 (TID 53) in 122 ms on minion-4 (executor 8) (21/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 1.0 (TID 61, minion-9, executor 6, partition 29, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 1.0 (TID 54) in 87 ms on minion-9 (executor 6) (22/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 1.0 (TID 62, minion-8, executor 7, partition 30, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 1.0 (TID 63, minion-5, executor 4, partition 31, PROCESS_LOCAL, 7949 bytes)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 1.0 (TID 55) in 95 ms on minion-8 (executor 7) (23/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 1.0 (TID 51) in 163 ms on minion-5 (executor 4) (24/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 1.0 (TID 56) in 105 ms on minion-2 (executor 2) (25/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_26 in memory on minion-7:39217 (size: 277.0 KB, free: 1047.7 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_25 in memory on minion-3:32773 (size: 277.7 KB, free: 1048.0 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_27 in memory on minion-6:33566 (size: 276.9 KB, free: 1047.7 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_28 in memory on minion-4:33017 (size: 277.3 KB, free: 1047.4 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_29 in memory on minion-9:42433 (size: 277.8 KB, free: 1047.4 MB)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_30 in memory on minion-8:33799 (size: 277.8 KB, free: 1048.0 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 1.0 (TID 60) in 65 ms on minion-4 (executor 8) (26/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 1.0 (TID 59) in 106 ms on minion-6 (executor 5) (27/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 1.0 (TID 61) in 82 ms on minion-9 (executor 6) (28/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 1.0 (TID 58) in 138 ms on minion-7 (executor 1) (29/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 1.0 (TID 62) in 94 ms on minion-8 (executor 7) (30/32)
+23/05/16 14:37:34 INFO storage.BlockManagerInfo: Added rdd_6_31 in memory on minion-5:44393 (size: 277.9 KB, free: 1047.7 MB)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 1.0 (TID 57) in 153 ms on minion-3 (executor 3) (31/32)
+23/05/16 14:37:34 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 1.0 (TID 63) in 142 ms on minion-5 (executor 4) (32/32)
+23/05/16 14:37:34 INFO cluster.YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: ResultStage 1 (count at /home/group030/G030HW2.py:148) finished in 0.771 s
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Job 0 finished: count at /home/group030/G030HW2.py:148, took 4.940072 s
+Dataset = orkut1M.txt
+Number of Edges = 1000000
+Number of Colors = 8
+Number of Repetitions = 3
+23/05/16 14:37:34 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:153
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Registering RDD 9 (groupByKey at /home/group030/G030HW2.py:90)
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Registering RDD 13 (reduceByKey at /home/group030/G030HW2.py:93)
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Got job 1 (runJob at PythonRDD.scala:153) with 1 output partitions
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Final stage: ResultStage 5 (runJob at PythonRDD.scala:153)
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 4)
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 4)
+23/05/16 14:37:34 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 3 (PairwiseRDD[9] at groupByKey at /home/group030/G030HW2.py:90), which has no missing parents
+23/05/16 14:37:35 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 10.9 KB, free 366.0 MB)
+23/05/16 14:37:35 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 7.1 KB, free 366.0 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on frontend:36474 (size: 7.1 KB, free: 366.3 MB)
+23/05/16 14:37:35 INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:35 INFO scheduler.DAGScheduler: Submitting 32 missing tasks from ShuffleMapStage 3 (PairwiseRDD[9] at groupByKey at /home/group030/G030HW2.py:90) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/05/16 14:37:35 INFO cluster.YarnScheduler: Adding task set 3.0 with 32 tasks
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 3.0 (TID 64, minion-9, executor 6, partition 6, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 3.0 (TID 65, minion-8, executor 7, partition 5, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 3.0 (TID 66, minion-7, executor 1, partition 1, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 3.0 (TID 67, minion-3, executor 3, partition 4, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 3.0 (TID 68, minion-6, executor 5, partition 2, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 3.0 (TID 69, minion-2, executor 2, partition 0, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 3.0 (TID 70, minion-5, executor 4, partition 3, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 3.0 (TID 71, minion-4, executor 8, partition 7, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on minion-5:44393 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on minion-9:42433 (size: 7.1 KB, free: 1047.4 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on minion-6:33566 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on minion-7:39217 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on minion-4:33017 (size: 7.1 KB, free: 1047.4 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on minion-8:33799 (size: 7.1 KB, free: 1047.9 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on minion-3:32773 (size: 7.1 KB, free: 1047.9 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on minion-2:33496 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 3.0 (TID 72, minion-7, executor 1, partition 12, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 3.0 (TID 66) in 159 ms on minion-7 (executor 1) (1/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 3.0 (TID 73, minion-6, executor 5, partition 14, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 3.0 (TID 68) in 162 ms on minion-6 (executor 5) (2/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 3.0 (TID 74, minion-8, executor 7, partition 23, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 3.0 (TID 65) in 166 ms on minion-8 (executor 7) (3/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 3.0 (TID 75, minion-9, executor 6, partition 11, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 3.0 (TID 64) in 177 ms on minion-9 (executor 6) (4/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 3.0 (TID 76, minion-5, executor 4, partition 8, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 3.0 (TID 70) in 197 ms on minion-5 (executor 4) (5/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 3.0 (TID 77, minion-4, executor 8, partition 9, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 3.0 (TID 71) in 200 ms on minion-4 (executor 8) (6/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 3.0 (TID 78, minion-2, executor 2, partition 10, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 3.0 (TID 69) in 210 ms on minion-2 (executor 2) (7/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 3.0 (TID 79, minion-3, executor 3, partition 13, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 3.0 (TID 67) in 234 ms on minion-3 (executor 3) (8/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 3.0 (TID 80, minion-6, executor 5, partition 20, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 3.0 (TID 73) in 125 ms on minion-6 (executor 5) (9/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 3.0 (TID 81, minion-8, executor 7, partition 30, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 3.0 (TID 74) in 128 ms on minion-8 (executor 7) (10/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 3.0 (TID 82, minion-7, executor 1, partition 18, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 3.0 (TID 72) in 151 ms on minion-7 (executor 1) (11/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 3.0 (TID 83, minion-5, executor 4, partition 19, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 3.0 (TID 76) in 125 ms on minion-5 (executor 4) (12/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 3.0 (TID 84, minion-4, executor 8, partition 15, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 3.0 (TID 77) in 126 ms on minion-4 (executor 8) (13/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 3.0 (TID 85, minion-9, executor 6, partition 16, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 3.0 (TID 75) in 212 ms on minion-9 (executor 6) (14/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 3.0 (TID 86, minion-2, executor 2, partition 17, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 3.0 (TID 78) in 200 ms on minion-2 (executor 2) (15/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 3.0 (TID 81) in 129 ms on minion-8 (executor 7) (16/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 3.0 (TID 87, minion-3, executor 3, partition 25, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 3.0 (TID 79) in 192 ms on minion-3 (executor 3) (17/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 3.0 (TID 88, minion-7, executor 1, partition 26, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 3.0 (TID 82) in 121 ms on minion-7 (executor 1) (18/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 3.0 (TID 89, minion-5, executor 4, partition 31, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 3.0 (TID 83) in 120 ms on minion-5 (executor 4) (19/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 3.0 (TID 90, minion-4, executor 8, partition 21, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 3.0 (TID 84) in 149 ms on minion-4 (executor 8) (20/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 3.0 (TID 91, minion-9, executor 6, partition 22, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 3.0 (TID 85) in 105 ms on minion-9 (executor 6) (21/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 3.0 (TID 88) in 130 ms on minion-7 (executor 1) (22/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 3.0 (TID 89) in 124 ms on minion-5 (executor 4) (23/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 3.0 (TID 92, minion-6, executor 5, partition 27, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 3.0 (TID 80) in 286 ms on minion-6 (executor 5) (24/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 3.0 (TID 93, minion-2, executor 2, partition 24, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 3.0 (TID 86) in 176 ms on minion-2 (executor 2) (25/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 3.0 (TID 94, minion-9, executor 6, partition 29, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 3.0 (TID 91) in 105 ms on minion-9 (executor 6) (26/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 3.0 (TID 95, minion-4, executor 8, partition 28, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 3.0 (TID 90) in 127 ms on minion-4 (executor 8) (27/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 3.0 (TID 87) in 195 ms on minion-3 (executor 3) (28/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 3.0 (TID 92) in 122 ms on minion-6 (executor 5) (29/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 3.0 (TID 93) in 113 ms on minion-2 (executor 2) (30/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 3.0 (TID 94) in 103 ms on minion-9 (executor 6) (31/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 3.0 (TID 95) in 120 ms on minion-4 (executor 8) (32/32)
+23/05/16 14:37:35 INFO cluster.YarnScheduler: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+23/05/16 14:37:35 INFO scheduler.DAGScheduler: ShuffleMapStage 3 (groupByKey at /home/group030/G030HW2.py:90) finished in 0.737 s
+23/05/16 14:37:35 INFO scheduler.DAGScheduler: looking for newly runnable stages
+23/05/16 14:37:35 INFO scheduler.DAGScheduler: running: Set()
+23/05/16 14:37:35 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 5, ShuffleMapStage 4)
+23/05/16 14:37:35 INFO scheduler.DAGScheduler: failed: Set()
+23/05/16 14:37:35 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 4 (PairwiseRDD[13] at reduceByKey at /home/group030/G030HW2.py:93), which has no missing parents
+23/05/16 14:37:35 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 12.1 KB, free 366.0 MB)
+23/05/16 14:37:35 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 7.9 KB, free 366.0 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on frontend:36474 (size: 7.9 KB, free: 366.3 MB)
+23/05/16 14:37:35 INFO spark.SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:35 INFO scheduler.DAGScheduler: Submitting 32 missing tasks from ShuffleMapStage 4 (PairwiseRDD[13] at reduceByKey at /home/group030/G030HW2.py:93) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/05/16 14:37:35 INFO cluster.YarnScheduler: Adding task set 4.0 with 32 tasks
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 96, minion-6, executor 5, partition 0, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 4.0 (TID 97, minion-3, executor 3, partition 1, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 4.0 (TID 98, minion-8, executor 7, partition 2, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 4.0 (TID 99, minion-5, executor 4, partition 3, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 4.0 (TID 100, minion-4, executor 8, partition 4, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 4.0 (TID 101, minion-7, executor 1, partition 5, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 4.0 (TID 102, minion-2, executor 2, partition 6, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 4.0 (TID 103, minion-9, executor 6, partition 7, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on minion-9:42433 (size: 7.9 KB, free: 1047.4 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on minion-8:33799 (size: 7.9 KB, free: 1047.9 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on minion-6:33566 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on minion-2:33496 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on minion-4:33017 (size: 7.9 KB, free: 1047.4 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on minion-7:39217 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on minion-5:44393 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:35 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on minion-3:32773 (size: 7.9 KB, free: 1047.9 MB)
+23/05/16 14:37:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.67.13.19:55892
+23/05/16 14:37:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.67.13.7:36252
+23/05/16 14:37:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.67.13.17:41902
+23/05/16 14:37:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.67.13.8:37830
+23/05/16 14:37:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.67.13.4:47712
+23/05/16 14:37:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.67.13.6:34336
+23/05/16 14:37:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.67.13.11:45890
+23/05/16 14:37:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.67.13.12:52088
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 4.0 (TID 104, minion-2, executor 2, partition 8, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 4.0 (TID 102) in 111 ms on minion-2 (executor 2) (1/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 4.0 (TID 105, minion-9, executor 6, partition 9, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 4.0 (TID 103) in 121 ms on minion-9 (executor 6) (2/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 4.0 (TID 106, minion-4, executor 8, partition 10, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 4.0 (TID 100) in 125 ms on minion-4 (executor 8) (3/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 4.0 (TID 107, minion-6, executor 5, partition 11, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 96) in 127 ms on minion-6 (executor 5) (4/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 4.0 (TID 108, minion-7, executor 1, partition 12, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 4.0 (TID 109, minion-8, executor 7, partition 13, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 4.0 (TID 101) in 152 ms on minion-7 (executor 1) (5/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 4.0 (TID 98) in 154 ms on minion-8 (executor 7) (6/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 4.0 (TID 110, minion-2, executor 2, partition 14, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 4.0 (TID 104) in 53 ms on minion-2 (executor 2) (7/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 4.0 (TID 111, minion-8, executor 7, partition 15, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 4.0 (TID 109) in 15 ms on minion-8 (executor 7) (8/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 4.0 (TID 112, minion-5, executor 4, partition 16, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 4.0 (TID 99) in 168 ms on minion-5 (executor 4) (9/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 4.0 (TID 113, minion-9, executor 6, partition 17, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 4.0 (TID 105) in 52 ms on minion-9 (executor 6) (10/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 4.0 (TID 114, minion-4, executor 8, partition 18, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 4.0 (TID 106) in 57 ms on minion-4 (executor 8) (11/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 4.0 (TID 115, minion-6, executor 5, partition 19, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 4.0 (TID 107) in 61 ms on minion-6 (executor 5) (12/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 4.0 (TID 116, minion-5, executor 4, partition 20, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 4.0 (TID 112) in 22 ms on minion-5 (executor 4) (13/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 4.0 (TID 117, minion-7, executor 1, partition 21, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 4.0 (TID 108) in 53 ms on minion-7 (executor 1) (14/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 4.0 (TID 118, minion-3, executor 3, partition 22, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 4.0 (TID 97) in 214 ms on minion-3 (executor 3) (15/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 4.0 (TID 119, minion-2, executor 2, partition 23, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 4.0 (TID 110) in 53 ms on minion-2 (executor 2) (16/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 4.0 (TID 120, minion-8, executor 7, partition 24, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 4.0 (TID 111) in 52 ms on minion-8 (executor 7) (17/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 4.0 (TID 121, minion-9, executor 6, partition 25, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 4.0 (TID 113) in 53 ms on minion-9 (executor 6) (18/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 4.0 (TID 122, minion-3, executor 3, partition 26, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 4.0 (TID 118) in 20 ms on minion-3 (executor 3) (19/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 4.0 (TID 123, minion-4, executor 8, partition 27, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 4.0 (TID 124, minion-6, executor 5, partition 28, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 4.0 (TID 114) in 58 ms on minion-4 (executor 8) (20/32)
+23/05/16 14:37:35 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 4.0 (TID 115) in 53 ms on minion-6 (executor 5) (21/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 4.0 (TID 125, minion-5, executor 4, partition 29, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 4.0 (TID 116) in 54 ms on minion-5 (executor 4) (22/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 4.0 (TID 126, minion-7, executor 1, partition 30, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 4.0 (TID 117) in 53 ms on minion-7 (executor 1) (23/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 4.0 (TID 127, minion-8, executor 7, partition 31, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 4.0 (TID 120) in 52 ms on minion-8 (executor 7) (24/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 4.0 (TID 119) in 56 ms on minion-2 (executor 2) (25/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 4.0 (TID 121) in 48 ms on minion-9 (executor 6) (26/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 4.0 (TID 124) in 53 ms on minion-6 (executor 5) (27/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 4.0 (TID 123) in 56 ms on minion-4 (executor 8) (28/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 4.0 (TID 125) in 58 ms on minion-5 (executor 4) (29/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 4.0 (TID 122) in 68 ms on minion-3 (executor 3) (30/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 4.0 (TID 126) in 53 ms on minion-7 (executor 1) (31/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 4.0 (TID 127) in 53 ms on minion-8 (executor 7) (32/32)
+23/05/16 14:37:36 INFO cluster.YarnScheduler: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: ShuffleMapStage 4 (reduceByKey at /home/group030/G030HW2.py:93) finished in 0.338 s
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: looking for newly runnable stages
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: running: Set()
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 5)
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: failed: Set()
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Submitting ResultStage 5 (PythonRDD[16] at RDD at PythonRDD.scala:53), which has no missing parents
+23/05/16 14:37:36 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 7.8 KB, free 366.0 MB)
+23/05/16 14:37:36 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 5.1 KB, free 366.0 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on frontend:36474 (size: 5.1 KB, free: 366.2 MB)
+23/05/16 14:37:36 INFO spark.SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (PythonRDD[16] at RDD at PythonRDD.scala:53) (first 15 tasks are for partitions Vector(0))
+23/05/16 14:37:36 INFO cluster.YarnScheduler: Adding task set 5.0 with 1 tasks
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.0 (TID 128, minion-4, executor 8, partition 0, PROCESS_LOCAL, 7673 bytes)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on minion-4:33017 (size: 5.1 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.67.13.6:34336
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 5.0 (TID 128) in 78 ms on minion-4 (executor 8) (1/1)
+23/05/16 14:37:36 INFO cluster.YarnScheduler: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: ResultStage 5 (runJob at PythonRDD.scala:153) finished in 0.085 s
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Job 1 finished: runJob at PythonRDD.scala:153, took 1.176451 s
+23/05/16 14:37:36 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:153
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Registering RDD 18 (groupByKey at /home/group030/G030HW2.py:90)
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Registering RDD 22 (reduceByKey at /home/group030/G030HW2.py:93)
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Got job 2 (runJob at PythonRDD.scala:153) with 1 output partitions
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Final stage: ResultStage 9 (runJob at PythonRDD.scala:153)
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 8)
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 8)
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 7 (PairwiseRDD[18] at groupByKey at /home/group030/G030HW2.py:90), which has no missing parents
+23/05/16 14:37:36 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 10.9 KB, free 366.0 MB)
+23/05/16 14:37:36 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 7.1 KB, free 366.0 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on frontend:36474 (size: 7.1 KB, free: 366.2 MB)
+23/05/16 14:37:36 INFO spark.SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 25
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Submitting 32 missing tasks from ShuffleMapStage 7 (PairwiseRDD[18] at groupByKey at /home/group030/G030HW2.py:90) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/05/16 14:37:36 INFO cluster.YarnScheduler: Adding task set 7.0 with 32 tasks
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 7.0 (TID 129, minion-5, executor 4, partition 3, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 7.0 (TID 130, minion-3, executor 3, partition 4, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 7.0 (TID 131, minion-6, executor 5, partition 2, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 7.0 (TID 132, minion-7, executor 1, partition 1, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 7.0 (TID 133, minion-4, executor 8, partition 7, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 7.0 (TID 134, minion-9, executor 6, partition 6, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 7.0 (TID 135, minion-2, executor 2, partition 0, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 7.0 (TID 136, minion-8, executor 7, partition 5, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on minion-4:33017 (size: 7.1 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on minion-9:42433 (size: 7.1 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on minion-7:39217 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on minion-8:33799 (size: 7.1 KB, free: 1047.9 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on minion-6:33566 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on frontend:36474 in memory (size: 5.1 KB, free: 366.2 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on minion-2:33496 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on minion-3:32773 (size: 7.1 KB, free: 1047.9 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on minion-4:33017 in memory (size: 5.1 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 93
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 90
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 26
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 123
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 32
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 40
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 3
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 31
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 4
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 83
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 114
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on minion-4:33017 in memory (size: 5.0 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on frontend:36474 in memory (size: 5.0 KB, free: 366.3 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on minion-2:33496 in memory (size: 5.0 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on minion-9:42433 in memory (size: 5.0 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on minion-5:44393 in memory (size: 5.0 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on minion-8:33799 in memory (size: 5.0 KB, free: 1047.9 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on minion-7:39217 in memory (size: 5.0 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on minion-6:33566 in memory (size: 5.0 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on minion-5:44393 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on minion-3:32773 in memory (size: 5.0 KB, free: 1047.9 MB)
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 42
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 87
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 28
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 68
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 91
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 80
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 92
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 60
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 55
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 15
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 117
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 104
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 75
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 6
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 37
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 50
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 98
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 108
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 120
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 72
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 53
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 70
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 121
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 12
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 101
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 39
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 116
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 24
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 100
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 18
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 57
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 38
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 56
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 85
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 54
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 67
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 81
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 63
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 118
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 111
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 69
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 102
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 16
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 22
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on frontend:36474 in memory (size: 5.0 KB, free: 366.3 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on minion-6:33566 in memory (size: 5.0 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on minion-7:39217 in memory (size: 5.0 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on minion-4:33017 in memory (size: 5.0 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on minion-2:33496 in memory (size: 5.0 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on minion-8:33799 in memory (size: 5.0 KB, free: 1047.9 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on minion-5:44393 in memory (size: 5.0 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on minion-3:32773 in memory (size: 5.0 KB, free: 1047.9 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on minion-9:42433 in memory (size: 5.0 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 7.0 (TID 137, minion-9, executor 6, partition 11, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 7.0 (TID 134) in 124 ms on minion-9 (executor 6) (1/32)
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 65
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 47
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 19
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 5
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 45
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 51
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 46
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 10
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 62
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 66
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 36
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 61
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 13
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 27
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 124
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 20
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 96
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 110
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on frontend:36474 in memory (size: 7.1 KB, free: 366.3 MB)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 7.0 (TID 138, minion-2, executor 2, partition 10, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on minion-2:33496 in memory (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on minion-8:33799 in memory (size: 7.1 KB, free: 1047.9 MB)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 7.0 (TID 135) in 135 ms on minion-2 (executor 2) (2/32)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on minion-4:33017 in memory (size: 7.1 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on minion-5:44393 in memory (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on minion-9:42433 in memory (size: 7.1 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on minion-7:39217 in memory (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on minion-3:32773 in memory (size: 7.1 KB, free: 1047.9 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on minion-6:33566 in memory (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 7.0 (TID 139, minion-6, executor 5, partition 14, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 7.0 (TID 131) in 139 ms on minion-6 (executor 5) (3/32)
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 49
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 71
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 30
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 59
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 14
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 2
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 7
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 79
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 119
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 11
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 23
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 21
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 106
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 88
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 125
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 58
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 78
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 34
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 74
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 86
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 41
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 1
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 107
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 44
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 35
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 105
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 76
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 48
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 97
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 112
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 9
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 94
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 99
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 52
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 84
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 95
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 33
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 109
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 115
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 73
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 43
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 82
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 17
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 64
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 113
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 7.0 (TID 140, minion-8, executor 7, partition 23, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 7.0 (TID 136) in 151 ms on minion-8 (executor 7) (4/32)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on frontend:36474 in memory (size: 7.9 KB, free: 366.3 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on minion-6:33566 in memory (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on minion-7:39217 in memory (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on minion-8:33799 in memory (size: 7.9 KB, free: 1048.0 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on minion-2:33496 in memory (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 7.0 (TID 141, minion-7, executor 1, partition 12, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on minion-5:44393 in memory (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 7.0 (TID 132) in 155 ms on minion-7 (executor 1) (5/32)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on minion-4:33017 in memory (size: 7.9 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on minion-9:42433 in memory (size: 7.9 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on minion-3:32773 in memory (size: 7.9 KB, free: 1048.0 MB)
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 77
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 29
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 103
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 122
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 8
+23/05/16 14:37:36 INFO spark.ContextCleaner: Cleaned accumulator 89
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 7.0 (TID 142, minion-4, executor 8, partition 9, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 7.0 (TID 133) in 169 ms on minion-4 (executor 8) (6/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 7.0 (TID 143, minion-5, executor 4, partition 8, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 7.0 (TID 129) in 194 ms on minion-5 (executor 4) (7/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 7.0 (TID 144, minion-3, executor 3, partition 13, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 7.0 (TID 130) in 227 ms on minion-3 (executor 3) (8/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 7.0 (TID 145, minion-9, executor 6, partition 16, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 7.0 (TID 137) in 104 ms on minion-9 (executor 6) (9/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 7.0 (TID 146, minion-2, executor 2, partition 17, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 7.0 (TID 138) in 111 ms on minion-2 (executor 2) (10/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 7.0 (TID 147, minion-6, executor 5, partition 20, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 7.0 (TID 139) in 116 ms on minion-6 (executor 5) (11/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 7.0 (TID 148, minion-8, executor 7, partition 30, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 7.0 (TID 140) in 125 ms on minion-8 (executor 7) (12/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 7.0 (TID 149, minion-7, executor 1, partition 18, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 7.0 (TID 141) in 125 ms on minion-7 (executor 1) (13/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 7.0 (TID 150, minion-4, executor 8, partition 15, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 7.0 (TID 142) in 127 ms on minion-4 (executor 8) (14/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 7.0 (TID 151, minion-5, executor 4, partition 19, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 7.0 (TID 143) in 117 ms on minion-5 (executor 4) (15/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 7.0 (TID 152, minion-9, executor 6, partition 22, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 7.0 (TID 145) in 101 ms on minion-9 (executor 6) (16/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 7.0 (TID 153, minion-6, executor 5, partition 27, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 7.0 (TID 147) in 111 ms on minion-6 (executor 5) (17/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 7.0 (TID 154, minion-3, executor 3, partition 25, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 7.0 (TID 144) in 148 ms on minion-3 (executor 3) (18/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 7.0 (TID 155, minion-2, executor 2, partition 24, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 7.0 (TID 146) in 133 ms on minion-2 (executor 2) (19/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 7.0 (TID 156, minion-7, executor 1, partition 26, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 7.0 (TID 149) in 121 ms on minion-7 (executor 1) (20/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 7.0 (TID 157, minion-4, executor 8, partition 21, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 7.0 (TID 150) in 117 ms on minion-4 (executor 8) (21/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 7.0 (TID 158, minion-5, executor 4, partition 31, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 7.0 (TID 151) in 120 ms on minion-5 (executor 4) (22/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 7.0 (TID 159, minion-9, executor 6, partition 29, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 7.0 (TID 152) in 102 ms on minion-9 (executor 6) (23/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 7.0 (TID 153) in 114 ms on minion-6 (executor 5) (24/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 7.0 (TID 155) in 112 ms on minion-2 (executor 2) (25/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 7.0 (TID 154) in 126 ms on minion-3 (executor 3) (26/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 7.0 (TID 148) in 229 ms on minion-8 (executor 7) (27/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 7.0 (TID 156) in 117 ms on minion-7 (executor 1) (28/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 7.0 (TID 160, minion-4, executor 8, partition 28, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 7.0 (TID 159) in 102 ms on minion-9 (executor 6) (29/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 7.0 (TID 157) in 121 ms on minion-4 (executor 8) (30/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 7.0 (TID 158) in 115 ms on minion-5 (executor 4) (31/32)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 7.0 (TID 160) in 119 ms on minion-4 (executor 8) (32/32)
+23/05/16 14:37:36 INFO cluster.YarnScheduler: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: ShuffleMapStage 7 (groupByKey at /home/group030/G030HW2.py:90) finished in 0.726 s
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: looking for newly runnable stages
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: running: Set()
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 9, ShuffleMapStage 8)
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: failed: Set()
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 8 (PairwiseRDD[22] at reduceByKey at /home/group030/G030HW2.py:93), which has no missing parents
+23/05/16 14:37:36 INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 12.1 KB, free 366.0 MB)
+23/05/16 14:37:36 INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 7.9 KB, free 366.0 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on frontend:36474 (size: 7.9 KB, free: 366.3 MB)
+23/05/16 14:37:36 INFO spark.SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:36 INFO scheduler.DAGScheduler: Submitting 32 missing tasks from ShuffleMapStage 8 (PairwiseRDD[22] at reduceByKey at /home/group030/G030HW2.py:93) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/05/16 14:37:36 INFO cluster.YarnScheduler: Adding task set 8.0 with 32 tasks
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 8.0 (TID 161, minion-7, executor 1, partition 0, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 8.0 (TID 162, minion-8, executor 7, partition 1, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 8.0 (TID 163, minion-6, executor 5, partition 2, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 8.0 (TID 164, minion-5, executor 4, partition 3, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 8.0 (TID 165, minion-2, executor 2, partition 4, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 8.0 (TID 166, minion-3, executor 3, partition 5, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 8.0 (TID 167, minion-9, executor 6, partition 6, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 8.0 (TID 168, minion-4, executor 8, partition 7, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on minion-9:42433 (size: 7.9 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on minion-2:33496 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on minion-7:39217 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on minion-4:33017 (size: 7.9 KB, free: 1047.4 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on minion-6:33566 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on minion-8:33799 (size: 7.9 KB, free: 1047.9 MB)
+23/05/16 14:37:36 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on minion-5:44393 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:36 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.67.13.19:55892
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on minion-3:32773 (size: 7.9 KB, free: 1047.9 MB)
+23/05/16 14:37:37 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.67.13.7:36252
+23/05/16 14:37:37 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.67.13.17:41902
+23/05/16 14:37:37 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.67.13.4:47712
+23/05/16 14:37:37 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.67.13.6:34336
+23/05/16 14:37:37 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.67.13.11:45890
+23/05/16 14:37:37 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.67.13.12:52088
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 8.0 (TID 169, minion-9, executor 6, partition 8, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 8.0 (TID 167) in 81 ms on minion-9 (executor 6) (1/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 8.0 (TID 170, minion-4, executor 8, partition 9, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 8.0 (TID 168) in 88 ms on minion-4 (executor 8) (2/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 8.0 (TID 171, minion-6, executor 5, partition 10, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 8.0 (TID 163) in 106 ms on minion-6 (executor 5) (3/32)
+23/05/16 14:37:37 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.67.13.8:37830
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 8.0 (TID 172, minion-6, executor 5, partition 11, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 8.0 (TID 171) in 13 ms on minion-6 (executor 5) (4/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 8.0 (TID 173, minion-9, executor 6, partition 12, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 8.0 (TID 169) in 53 ms on minion-9 (executor 6) (5/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 8.0 (TID 174, minion-5, executor 4, partition 13, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 8.0 (TID 164) in 135 ms on minion-5 (executor 4) (6/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 8.0 (TID 175, minion-8, executor 7, partition 14, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 8.0 (TID 162) in 138 ms on minion-8 (executor 7) (7/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 8.0 (TID 176, minion-4, executor 8, partition 15, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 8.0 (TID 170) in 51 ms on minion-4 (executor 8) (8/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 8.0 (TID 177, minion-8, executor 7, partition 16, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 8.0 (TID 175) in 22 ms on minion-8 (executor 7) (9/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 8.0 (TID 178, minion-6, executor 5, partition 17, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 8.0 (TID 172) in 49 ms on minion-6 (executor 5) (10/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 8.0 (TID 179, minion-7, executor 1, partition 18, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 8.0 (TID 161) in 171 ms on minion-7 (executor 1) (11/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 8.0 (TID 180, minion-7, executor 1, partition 19, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 8.0 (TID 179) in 13 ms on minion-7 (executor 1) (12/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 8.0 (TID 181, minion-9, executor 6, partition 20, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 8.0 (TID 173) in 52 ms on minion-9 (executor 6) (13/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 8.0 (TID 182, minion-5, executor 4, partition 21, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 8.0 (TID 183, minion-4, executor 8, partition 22, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 8.0 (TID 174) in 56 ms on minion-5 (executor 4) (14/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 8.0 (TID 176) in 53 ms on minion-4 (executor 8) (15/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 8.0 (TID 184, minion-3, executor 3, partition 23, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 8.0 (TID 166) in 200 ms on minion-3 (executor 3) (16/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 8.0 (TID 185, minion-8, executor 7, partition 24, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 8.0 (TID 177) in 53 ms on minion-8 (executor 7) (17/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 8.0 (TID 186, minion-6, executor 5, partition 25, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 8.0 (TID 178) in 54 ms on minion-6 (executor 5) (18/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 8.0 (TID 187, minion-2, executor 2, partition 26, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 8.0 (TID 188, minion-3, executor 3, partition 27, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 8.0 (TID 184) in 28 ms on minion-3 (executor 3) (19/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 8.0 (TID 165) in 227 ms on minion-2 (executor 2) (20/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 8.0 (TID 189, minion-7, executor 1, partition 28, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 8.0 (TID 180) in 52 ms on minion-7 (executor 1) (21/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 8.0 (TID 190, minion-2, executor 2, partition 29, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 8.0 (TID 187) in 12 ms on minion-2 (executor 2) (22/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 8.0 (TID 191, minion-5, executor 4, partition 30, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 8.0 (TID 182) in 51 ms on minion-5 (executor 4) (23/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 8.0 (TID 192, minion-4, executor 8, partition 31, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 8.0 (TID 183) in 52 ms on minion-4 (executor 8) (24/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 8.0 (TID 181) in 60 ms on minion-9 (executor 6) (25/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 8.0 (TID 185) in 52 ms on minion-8 (executor 7) (26/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 8.0 (TID 186) in 57 ms on minion-6 (executor 5) (27/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 8.0 (TID 188) in 56 ms on minion-3 (executor 3) (28/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 8.0 (TID 190) in 51 ms on minion-2 (executor 2) (29/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 8.0 (TID 191) in 52 ms on minion-5 (executor 4) (30/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 8.0 (TID 192) in 52 ms on minion-4 (executor 8) (31/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 8.0 (TID 189) in 71 ms on minion-7 (executor 1) (32/32)
+23/05/16 14:37:37 INFO cluster.YarnScheduler: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: ShuffleMapStage 8 (reduceByKey at /home/group030/G030HW2.py:93) finished in 0.314 s
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: looking for newly runnable stages
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: running: Set()
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 9)
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: failed: Set()
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Submitting ResultStage 9 (PythonRDD[25] at RDD at PythonRDD.scala:53), which has no missing parents
+23/05/16 14:37:37 INFO memory.MemoryStore: Block broadcast_8 stored as values in memory (estimated size 7.8 KB, free 366.0 MB)
+23/05/16 14:37:37 INFO memory.MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 5.1 KB, free 366.0 MB)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on frontend:36474 (size: 5.1 KB, free: 366.3 MB)
+23/05/16 14:37:37 INFO spark.SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (PythonRDD[25] at RDD at PythonRDD.scala:53) (first 15 tasks are for partitions Vector(0))
+23/05/16 14:37:37 INFO cluster.YarnScheduler: Adding task set 9.0 with 1 tasks
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 9.0 (TID 193, minion-7, executor 1, partition 0, PROCESS_LOCAL, 7673 bytes)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on minion-7:39217 (size: 5.1 KB, free: 1047.7 MB)
+23/05/16 14:37:37 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 10.67.13.4:47712
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 9.0 (TID 193) in 79 ms on minion-7 (executor 1) (1/1)
+23/05/16 14:37:37 INFO cluster.YarnScheduler: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: ResultStage 9 (runJob at PythonRDD.scala:153) finished in 0.087 s
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Job 2 finished: runJob at PythonRDD.scala:153, took 1.143304 s
+23/05/16 14:37:37 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:153
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Registering RDD 27 (groupByKey at /home/group030/G030HW2.py:90)
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Registering RDD 31 (reduceByKey at /home/group030/G030HW2.py:93)
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Got job 3 (runJob at PythonRDD.scala:153) with 1 output partitions
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Final stage: ResultStage 13 (runJob at PythonRDD.scala:153)
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 12)
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 12)
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 11 (PairwiseRDD[27] at groupByKey at /home/group030/G030HW2.py:90), which has no missing parents
+23/05/16 14:37:37 INFO memory.MemoryStore: Block broadcast_9 stored as values in memory (estimated size 10.9 KB, free 366.0 MB)
+23/05/16 14:37:37 INFO memory.MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 7.1 KB, free 366.0 MB)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on frontend:36474 (size: 7.1 KB, free: 366.3 MB)
+23/05/16 14:37:37 INFO spark.SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:37 INFO scheduler.DAGScheduler: Submitting 32 missing tasks from ShuffleMapStage 11 (PairwiseRDD[27] at groupByKey at /home/group030/G030HW2.py:90) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/05/16 14:37:37 INFO cluster.YarnScheduler: Adding task set 11.0 with 32 tasks
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 11.0 (TID 194, minion-2, executor 2, partition 0, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 11.0 (TID 195, minion-9, executor 6, partition 6, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 11.0 (TID 196, minion-5, executor 4, partition 3, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 11.0 (TID 197, minion-6, executor 5, partition 2, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 11.0 (TID 198, minion-7, executor 1, partition 1, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 11.0 (TID 199, minion-4, executor 8, partition 7, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 11.0 (TID 200, minion-3, executor 3, partition 4, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 11.0 (TID 201, minion-8, executor 7, partition 5, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on minion-4:33017 (size: 7.1 KB, free: 1047.4 MB)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on minion-2:33496 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on minion-7:39217 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on minion-6:33566 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on minion-9:42433 (size: 7.1 KB, free: 1047.4 MB)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on minion-8:33799 (size: 7.1 KB, free: 1047.9 MB)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on minion-5:44393 (size: 7.1 KB, free: 1047.7 MB)
+23/05/16 14:37:37 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on minion-3:32773 (size: 7.1 KB, free: 1047.9 MB)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 11.0 (TID 202, minion-9, executor 6, partition 11, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 11.0 (TID 195) in 117 ms on minion-9 (executor 6) (1/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 11.0 (TID 203, minion-2, executor 2, partition 10, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 11.0 (TID 194) in 126 ms on minion-2 (executor 2) (2/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 11.0 (TID 204, minion-7, executor 1, partition 12, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 11.0 (TID 198) in 127 ms on minion-7 (executor 1) (3/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 11.0 (TID 205, minion-4, executor 8, partition 9, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 11.0 (TID 199) in 128 ms on minion-4 (executor 8) (4/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 11.0 (TID 206, minion-8, executor 7, partition 23, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 11.0 (TID 201) in 130 ms on minion-8 (executor 7) (5/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 11.0 (TID 207, minion-5, executor 4, partition 8, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 11.0 (TID 196) in 135 ms on minion-5 (executor 4) (6/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 11.0 (TID 208, minion-6, executor 5, partition 14, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 11.0 (TID 197) in 138 ms on minion-6 (executor 5) (7/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 11.0 (TID 209, minion-3, executor 3, partition 13, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 11.0 (TID 200) in 161 ms on minion-3 (executor 3) (8/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 11.0 (TID 210, minion-9, executor 6, partition 16, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 11.0 (TID 202) in 106 ms on minion-9 (executor 6) (9/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 11.0 (TID 211, minion-2, executor 2, partition 17, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 11.0 (TID 203) in 110 ms on minion-2 (executor 2) (10/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 11.0 (TID 212, minion-7, executor 1, partition 18, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 11.0 (TID 204) in 115 ms on minion-7 (executor 1) (11/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 11.0 (TID 213, minion-4, executor 8, partition 15, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 11.0 (TID 205) in 115 ms on minion-4 (executor 8) (12/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 11.0 (TID 214, minion-8, executor 7, partition 30, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 11.0 (TID 206) in 115 ms on minion-8 (executor 7) (13/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 11.0 (TID 215, minion-5, executor 4, partition 19, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 11.0 (TID 207) in 115 ms on minion-5 (executor 4) (14/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 11.0 (TID 216, minion-6, executor 5, partition 20, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 11.0 (TID 208) in 125 ms on minion-6 (executor 5) (15/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 11.0 (TID 217, minion-3, executor 3, partition 25, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 11.0 (TID 209) in 132 ms on minion-3 (executor 3) (16/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 11.0 (TID 218, minion-9, executor 6, partition 22, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 11.0 (TID 210) in 103 ms on minion-9 (executor 6) (17/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 11.0 (TID 219, minion-2, executor 2, partition 24, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 11.0 (TID 211) in 115 ms on minion-2 (executor 2) (18/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 11.0 (TID 220, minion-7, executor 1, partition 26, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 11.0 (TID 212) in 116 ms on minion-7 (executor 1) (19/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 11.0 (TID 221, minion-4, executor 8, partition 21, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 11.0 (TID 213) in 118 ms on minion-4 (executor 8) (20/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 11.0 (TID 214) in 121 ms on minion-8 (executor 7) (21/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 11.0 (TID 222, minion-5, executor 4, partition 31, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 11.0 (TID 215) in 140 ms on minion-5 (executor 4) (22/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 11.0 (TID 223, minion-6, executor 5, partition 27, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 11.0 (TID 216) in 130 ms on minion-6 (executor 5) (23/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 11.0 (TID 224, minion-9, executor 6, partition 29, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 11.0 (TID 218) in 102 ms on minion-9 (executor 6) (24/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 11.0 (TID 217) in 158 ms on minion-3 (executor 3) (25/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 11.0 (TID 219) in 117 ms on minion-2 (executor 2) (26/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 11.0 (TID 220) in 116 ms on minion-7 (executor 1) (27/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 11.0 (TID 225, minion-4, executor 8, partition 28, PROCESS_LOCAL, 7938 bytes)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 11.0 (TID 221) in 115 ms on minion-4 (executor 8) (28/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 11.0 (TID 222) in 124 ms on minion-5 (executor 4) (29/32)
+23/05/16 14:37:37 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 11.0 (TID 224) in 97 ms on minion-9 (executor 6) (30/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 11.0 (TID 225) in 113 ms on minion-4 (executor 8) (31/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 11.0 (TID 223) in 214 ms on minion-6 (executor 5) (32/32)
+23/05/16 14:37:38 INFO cluster.YarnScheduler: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: ShuffleMapStage 11 (groupByKey at /home/group030/G030HW2.py:90) finished in 0.617 s
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: looking for newly runnable stages
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: running: Set()
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 12, ResultStage 13)
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: failed: Set()
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 12 (PairwiseRDD[31] at reduceByKey at /home/group030/G030HW2.py:93), which has no missing parents
+23/05/16 14:37:38 INFO memory.MemoryStore: Block broadcast_10 stored as values in memory (estimated size 12.1 KB, free 366.0 MB)
+23/05/16 14:37:38 INFO memory.MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 7.9 KB, free 366.0 MB)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on frontend:36474 (size: 7.9 KB, free: 366.2 MB)
+23/05/16 14:37:38 INFO spark.SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: Submitting 32 missing tasks from ShuffleMapStage 12 (PairwiseRDD[31] at reduceByKey at /home/group030/G030HW2.py:93) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/05/16 14:37:38 INFO cluster.YarnScheduler: Adding task set 12.0 with 32 tasks
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 12.0 (TID 226, minion-4, executor 8, partition 0, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 12.0 (TID 227, minion-5, executor 4, partition 1, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 12.0 (TID 228, minion-8, executor 7, partition 2, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 12.0 (TID 229, minion-3, executor 3, partition 3, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 12.0 (TID 230, minion-6, executor 5, partition 4, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 12.0 (TID 231, minion-7, executor 1, partition 5, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 12.0 (TID 232, minion-9, executor 6, partition 6, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 12.0 (TID 233, minion-2, executor 2, partition 7, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on minion-4:33017 (size: 7.9 KB, free: 1047.4 MB)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on minion-2:33496 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on minion-9:42433 (size: 7.9 KB, free: 1047.4 MB)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on minion-6:33566 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on minion-7:39217 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on minion-5:44393 (size: 7.9 KB, free: 1047.7 MB)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on minion-8:33799 (size: 7.9 KB, free: 1047.9 MB)
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.67.13.6:34336
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.67.13.8:37830
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.67.13.7:36252
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.67.13.19:55892
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.67.13.4:47712
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.67.13.11:45890
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on minion-3:32773 (size: 7.9 KB, free: 1047.9 MB)
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.67.13.17:41902
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.67.13.12:52088
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 12.0 (TID 234, minion-9, executor 6, partition 8, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 12.0 (TID 232) in 79 ms on minion-9 (executor 6) (1/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 12.0 (TID 235, minion-6, executor 5, partition 9, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 12.0 (TID 230) in 84 ms on minion-6 (executor 5) (2/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 12.0 (TID 236, minion-8, executor 7, partition 10, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 12.0 (TID 228) in 91 ms on minion-8 (executor 7) (3/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 12.0 (TID 237, minion-4, executor 8, partition 11, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 12.0 (TID 226) in 95 ms on minion-4 (executor 8) (4/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 12.0 (TID 238, minion-2, executor 2, partition 12, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 12.0 (TID 233) in 108 ms on minion-2 (executor 2) (5/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 12.0 (TID 239, minion-7, executor 1, partition 13, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 12.0 (TID 231) in 115 ms on minion-7 (executor 1) (6/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 12.0 (TID 240, minion-7, executor 1, partition 14, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 12.0 (TID 239) in 13 ms on minion-7 (executor 1) (7/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 12.0 (TID 241, minion-9, executor 6, partition 15, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 12.0 (TID 234) in 50 ms on minion-9 (executor 6) (8/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 12.0 (TID 242, minion-6, executor 5, partition 16, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 12.0 (TID 235) in 51 ms on minion-6 (executor 5) (9/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 12.0 (TID 243, minion-2, executor 2, partition 17, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 12.0 (TID 238) in 28 ms on minion-2 (executor 2) (10/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 12.0 (TID 244, minion-8, executor 7, partition 18, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 12.0 (TID 236) in 53 ms on minion-8 (executor 7) (11/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 12.0 (TID 245, minion-4, executor 8, partition 19, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 12.0 (TID 237) in 50 ms on minion-4 (executor 8) (12/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 12.0 (TID 246, minion-5, executor 4, partition 20, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 12.0 (TID 227) in 148 ms on minion-5 (executor 4) (13/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 12.0 (TID 247, minion-3, executor 3, partition 21, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 12.0 (TID 229) in 155 ms on minion-3 (executor 3) (14/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 12.0 (TID 248, minion-5, executor 4, partition 22, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 12.0 (TID 246) in 15 ms on minion-5 (executor 4) (15/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 12.0 (TID 249, minion-9, executor 6, partition 23, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 12.0 (TID 241) in 49 ms on minion-9 (executor 6) (16/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 12.0 (TID 250, minion-7, executor 1, partition 24, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 12.0 (TID 240) in 50 ms on minion-7 (executor 1) (17/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 12.0 (TID 251, minion-3, executor 3, partition 25, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 12.0 (TID 247) in 27 ms on minion-3 (executor 3) (18/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 12.0 (TID 252, minion-6, executor 5, partition 26, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 12.0 (TID 242) in 53 ms on minion-6 (executor 5) (19/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 12.0 (TID 253, minion-2, executor 2, partition 27, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 12.0 (TID 243) in 51 ms on minion-2 (executor 2) (20/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 12.0 (TID 254, minion-4, executor 8, partition 28, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 12.0 (TID 245) in 48 ms on minion-4 (executor 8) (21/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 12.0 (TID 255, minion-8, executor 7, partition 29, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 12.0 (TID 244) in 52 ms on minion-8 (executor 7) (22/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 12.0 (TID 256, minion-5, executor 4, partition 30, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 12.0 (TID 248) in 53 ms on minion-5 (executor 4) (23/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 12.0 (TID 257, minion-9, executor 6, partition 31, PROCESS_LOCAL, 7662 bytes)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 12.0 (TID 249) in 49 ms on minion-9 (executor 6) (24/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 12.0 (TID 250) in 51 ms on minion-7 (executor 1) (25/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 12.0 (TID 251) in 56 ms on minion-3 (executor 3) (26/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 12.0 (TID 252) in 52 ms on minion-6 (executor 5) (27/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 12.0 (TID 253) in 52 ms on minion-2 (executor 2) (28/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 12.0 (TID 255) in 52 ms on minion-8 (executor 7) (29/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 12.0 (TID 254) in 61 ms on minion-4 (executor 8) (30/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 12.0 (TID 256) in 53 ms on minion-5 (executor 4) (31/32)
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 12.0 (TID 257) in 47 ms on minion-9 (executor 6) (32/32)
+23/05/16 14:37:38 INFO cluster.YarnScheduler: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: ShuffleMapStage 12 (reduceByKey at /home/group030/G030HW2.py:93) finished in 0.282 s
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: looking for newly runnable stages
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: running: Set()
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 13)
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: failed: Set()
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: Submitting ResultStage 13 (PythonRDD[34] at RDD at PythonRDD.scala:53), which has no missing parents
+23/05/16 14:37:38 INFO memory.MemoryStore: Block broadcast_11 stored as values in memory (estimated size 7.8 KB, free 366.0 MB)
+23/05/16 14:37:38 INFO memory.MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 5.1 KB, free 365.9 MB)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on frontend:36474 (size: 5.1 KB, free: 366.2 MB)
+23/05/16 14:37:38 INFO spark.SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1161
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 13 (PythonRDD[34] at RDD at PythonRDD.scala:53) (first 15 tasks are for partitions Vector(0))
+23/05/16 14:37:38 INFO cluster.YarnScheduler: Adding task set 13.0 with 1 tasks
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 13.0 (TID 258, minion-6, executor 5, partition 0, PROCESS_LOCAL, 7673 bytes)
+23/05/16 14:37:38 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on minion-6:33566 (size: 5.1 KB, free: 1047.7 MB)
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 5 to 10.67.13.7:36252
+23/05/16 14:37:38 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 13.0 (TID 258) in 86 ms on minion-6 (executor 5) (1/1)
+23/05/16 14:37:38 INFO cluster.YarnScheduler: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: ResultStage 13 (runJob at PythonRDD.scala:153) finished in 0.093 s
+23/05/16 14:37:38 INFO scheduler.DAGScheduler: Job 3 finished: runJob at PythonRDD.scala:153, took 1.008645 s
+Approximation through node coloring
+- Number of triangles (median over 3 runs) = 3102336.000000
+- Running time (average over 3 runs) = 1189 ms
+23/05/16 14:37:38 INFO spark.SparkContext: Invoking stop() from shutdown hook
+23/05/16 14:37:38 INFO server.AbstractConnector: Stopped Spark@796e6965{HTTP/1.1,[http/1.1]}{10.67.13.9:4042}
+23/05/16 14:37:38 INFO ui.SparkUI: Stopped Spark web UI at http://frontend:4042
+23/05/16 14:37:38 INFO cluster.YarnClientSchedulerBackend: Interrupting monitor thread
+23/05/16 14:37:38 INFO cluster.YarnClientSchedulerBackend: Shutting down all executors
+23/05/16 14:37:38 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+23/05/16 14:37:38 INFO cluster.SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+23/05/16 14:37:38 INFO cluster.YarnClientSchedulerBackend: Stopped
+23/05/16 14:37:38 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+23/05/16 14:37:38 INFO memory.MemoryStore: MemoryStore cleared
+23/05/16 14:37:38 INFO storage.BlockManager: BlockManager stopped
+23/05/16 14:37:38 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+23/05/16 14:37:38 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+23/05/16 14:37:38 INFO spark.SparkContext: Successfully stopped SparkContext
+23/05/16 14:37:38 INFO util.ShutdownHookManager: Shutdown hook called
+23/05/16 14:37:38 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-12a4aa44-1dbb-4d3c-90c0-4807d1edf1e4
+23/05/16 14:37:38 INFO util.ShutdownHookManager: Deleting directory /var/spark/local/spark-fc846ca1-06b7-48f3-b748-6140bda4861c
+23/05/16 14:37:38 INFO util.ShutdownHookManager: Deleting directory /var/spark/local/spark-fc846ca1-06b7-48f3-b748-6140bda4861c/pyspark-bc8e05a5-6a29-412d-afcf-73aeee4d67bf

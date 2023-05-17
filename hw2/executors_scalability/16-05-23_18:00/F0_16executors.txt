@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/home/group030/G030HW2.py", line 177, in <module>
+    main()
+  File "/home/group030/G030HW2.py", line 117, in main
+    sc = SparkContext(conf=conf)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 136, in __init__
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 198, in _do_init
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 306, in _initialize_context
+  File "/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1525, in __call__
+  File "/opt/spark/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+: java.io.IOException: No space left on device
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.util.zip.DeflaterOutputStream.deflate(DeflaterOutputStream.java:253)
+	at java.util.zip.DeflaterOutputStream.write(DeflaterOutputStream.java:211)
+	at java.util.zip.ZipOutputStream.write(ZipOutputStream.java:331)
+	at org.spark_project.guava.io.ByteStreams.copy(ByteStreams.java:211)
+	at org.spark_project.guava.io.ByteSource.copyTo(ByteSource.java:183)
+	at org.spark_project.guava.io.Files.copy(Files.java:417)
+	at org.apache.spark.deploy.yarn.Client$$anonfun$prepareLocalResources$7.apply(Client.scala:556)
+	at org.apache.spark.deploy.yarn.Client$$anonfun$prepareLocalResources$7.apply(Client.scala:553)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.deploy.yarn.Client.prepareLocalResources(Client.scala:553)
+	at org.apache.spark.deploy.yarn.Client.createContainerLaunchContext(Client.scala:865)
+	at org.apache.spark.deploy.yarn.Client.submitApplication(Client.scala:179)
+	at org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend.start(YarnClientSchedulerBackend.scala:57)
+	at org.apache.spark.scheduler.TaskSchedulerImpl.start(TaskSchedulerImpl.scala:183)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:501)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:238)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+

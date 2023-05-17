@@ -1,0 +1,7 @@
+Dataset = orkut117M.txt
+Number of Edges = 117185083
+Number of Colors = 8
+Number of Repetitions = 3
+Approximation through node coloring
+- Number of triangles (median over 3 runs) = 617661568.000000
+- Running time (average over 3 runs) = 65193 ms

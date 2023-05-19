@@ -113,7 +113,7 @@ def main():
         return
 
 	# Spark setup
-    conf = SparkConf().setAppName('G030HW1')
+    conf = SparkConf().setAppName('G030HW2')
     sc = SparkContext(conf=conf)
 
     # parse C parameter

@@ -114,6 +114,7 @@ def main():
 
 	# Spark setup
     conf = SparkConf().setAppName('G030HW2')
+    conf.set("spark.locality.wait", "0s")
     sc = SparkContext(conf=conf)
 
     # parse C parameter
@@ -144,8 +145,7 @@ def main():
     edges = rawData.map(lambda x: tuple(map(int, x.split(',')))).repartition(numPartitions=32).cache()
     numedges = edges.count()
 
-    _, file_name = os.path.split(data_path)
-    print("Dataset = %s\nNumber of Edges = %d\nNumber of Colors = %d\nNumber of Repetitions = %d" % (file_name, numedges, C, R))
+    print("Dataset = %s\nNumber of Edges = %d\nNumber of Colors = %d\nNumber of Repetitions = %d" % (data_path, numedges, C, R))
 
     sum_time = 0
     runs_triangles = []
@@ -155,8 +155,8 @@ def main():
             runs_triangles.append(triangles)
             sum_time += time
     
-        print("Approximation through node coloring\n"
-            "- Number of triangles (median over %d runs) = %f\n"
+        print("Approximation algorithm with node coloring\n"
+            "- Number of triangles (median over %d runs) = %d\n"
             "- Running time (average over %d runs) = %d ms" 
             % (R, statistics.median(runs_triangles), R, int(sum_time/R)))
     elif F == 1:

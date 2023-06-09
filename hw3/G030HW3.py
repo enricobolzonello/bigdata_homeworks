@@ -1,19 +1,17 @@
 from pyspark import SparkContext, SparkConf
 from pyspark.streaming import StreamingContext
 from pyspark import StorageLevel
-import threading
-import sys
+from collections import defaultdict
 import numpy as np
-import random
 import statistics
+import threading
+import random
+import sys
+
 
 # After how many items should we stop?
 THRESHOLD = 10000000
 P = 8191
-
-def hash_function(t,x,C):
-    return ((t[0]*x + t[1]) % P) % C
-
 
 # Operations to perform after receiving an RDD 'batch' at time 'time'
 def process_batch(time, batch):
@@ -27,38 +25,34 @@ def process_batch(time, batch):
 
     batch = batch.filter(lambda x: int(x)>=left and int(x)<= right)
 
-    # 2. Count frequency for each item
-    batch_dict = batch.map(lambda s: (int(s), 1)).reduceByKey(lambda i1, i2: i1 + i2).collectAsMap()
+    # Count exact frequency for each item
+    batch_dict = batch.map(lambda x: (int(x), 1)).reduceByKey(lambda x, y: x + y).collectAsMap()
     for key in batch_dict:
-        freq_dict[key] = freq_dict.get(key, 0) + batch_dict[key]
+        freq_dict[key] += batch_dict[key]
     
-    # COUNT SKETCH
+    # Count sketch update
     for x in batch.collect():
         for j in range(0, D):
-            count_sketch_matrix[j,hash_function(hash_function_parameters[j] ,int(x), W)] += (hash_function(hash_function_parameters[j], int(x), 2)*2 - 1) # update
-            
-    # If we wanted, here we could run some additional code on the global histogram
+            count_sketch_matrix[j, hash[j](int(x),W)] += (hash[j](int(x),2)*2 - 1)
+    
     if batch_size > 0:
         print("Batch size at time [{0}] is: {1}".format(time, batch_size))
-
+    
     if streamLength[0] >= THRESHOLD:
         stopping_condition.set()
+
+
 
 if __name__ == '__main__':
     assert len(sys.argv) == 7, "USAGE: D W left right K portExp"
 
     conf = SparkConf().setMaster("local[*]").setAppName("DistinctExample")
-    # If you get an OutOfMemory error in the heap consider to increase the
-    # executor and drivers heap space with the following lines:
-    # conf = conf.set("spark.executor.memory", "4g").set("spark.driver.memory", "4g")
-    
     
     sc = SparkContext(conf=conf)
     ssc = StreamingContext(sc, 1)  # Batch duration of 1 second
     ssc.sparkContext.setLogLevel("ERROR")
     
     stopping_condition = threading.Event()
-
 
     # INPUT READING
     D = sys.argv[1]
@@ -67,7 +61,7 @@ if __name__ == '__main__':
 
     W = sys.argv[2]
     assert W.isdigit() and int(W)>0, "W must be an integer greater than 0"
-    W = int(D)
+    W = int(W)
 
     left = sys.argv[3]
     assert left.isdigit() and int(left)>0, "left must be an integer greater than 0"
@@ -87,17 +81,13 @@ if __name__ == '__main__':
     print("Receiving data from port =", portExp)
     
     # DEFINING THE REQUIRED DATA STRUCTURES TO MAINTAIN THE STATE OF THE STREAM
-    streamLength = [0] # Stream length (an array to be passed by reference)
-    histogram = {} # Hash Table for the distinct elements
-    freq_dict = {} # Dictionary for exact frequency
-    count_sketch_matrix = np.empty([D,W]) #matrix for the count sketch
-    hash_function_parameters = [(random.randint(1,P-1), random.randint(1,P-1)) for _ in range(D)]
+    streamLength = [0]
+    freq_dict = defaultdict(int)
+    count_sketch_matrix = np.zeros([D,W], dtype=np.int32)
+    hash = [lambda x,C,a=a,b=b: ((a*x+b)%P)%C for a,b in [(random.randint(1,P-1), random.randint(1,P-1)) for _ in range(D)]] # Python is strange...
 
     # CODE TO PROCESS AN UNBOUNDED STREAM OF DATA IN BATCHES
     stream = ssc.socketTextStream("algo.dei.unipd.it", portExp, StorageLevel.MEMORY_AND_DISK)
-    # For each batch, to the following.
-    # BEWARE: the `foreachRDD` method has "at least once semantics", meaning
-    # that the same data might be processed multiple times in case of failure.
     stream.foreachRDD(lambda time, batch: process_batch(time, batch))
     
     # MANAGING STREAMING SPARK CONTEXT
@@ -106,35 +96,38 @@ if __name__ == '__main__':
     print("Waiting for shutdown condition")
     stopping_condition.wait()
     print("Stopping the streaming engine")
-    # NOTE: You will see some data being processed even after the
-    # shutdown command has been issued: This is because we are asking
-    # to stop "gracefully", meaning that any outstanding work
-    # will be done.
     ssc.stop(False, True)
     print("Streaming engine stopped")
 
     # COMPUTE AND PRINT FINAL STATISTICS
     n_items = sum(freq_dict.values())
     n_distinct_items = len(freq_dict.keys())
-    # 3. Exact F2
-    F2 = sum((x**2)/n_items**2 for x in freq_dict.values())
-    # 4. Estimated F2
-    F2_estimate = 0
-    for key in freq_dict:
-        fu_list = []
-        for j in range(0,D):
-            fu_list.append((hash_function(hash_function_parameters[j], key, 2)*2 - 1) * count_sketch_matrix[j,hash_function(hash_function_parameters[j] ,key, W)])
-        F2_estimate += statistics.median(fu_list)**2/n_items**2
-
-    print("Total number of items = ", streamLength[0])
-    print(f"Total number in items in [{left},{right}] = ", n_items)
-    print(f"Number of distinct items in [{left},{right}] = ", n_distinct_items)
-
-    if K <= 20:
-        for i, pair in enumerate(dict(sorted(freq_dict.items(), key=lambda item: item[1], reverse=True))):
-            print(f"Item {pair} Freq = {freq_dict[pair]} Est. Freq = {F2_estimate}")
-
-            if i == K:
-                break
     
-    print(f"F2 {F2} F2 estimate temp")
+    # 3. Exact F2
+    F2_exact = sum((x**2)/(n_items**2) for x in freq_dict.values())
+    
+    # 4. Estimated F2
+    F2_row_estimates = []
+    for j in range(D):
+        F2j = sum((count_sketch_matrix[j,k]**2)/(n_items**2) for k in range(W))
+        F2_row_estimates.append(F2j)
+    F2_estimate = (statistics.median(F2_row_estimates))
+    
+    # 5. Avg. error of the k-top frequencies
+    frequencies = []
+    error_sum = 0
+    for key, fk_exact in sorted(freq_dict.items(), key=lambda item : item[1], reverse=True)[:K]:
+        fk_estimate = statistics.median([(hash[j](key,2)*2 - 1)*count_sketch_matrix[j,hash[j](key,W)] for j in range(D)])
+        frequencies.append((key, fk_exact, fk_estimate))
+        error_sum += abs(fk_exact-fk_estimate)/fk_exact
+    error_avg = error_sum/K
+    
+    print(f"D = {D} W = {W}, [left,right] = [{left},{right}] K = {K} Port = {portExp}")
+    print(f"Total number of items = {streamLength[0]}")
+    print(f"Total number in items in [{left},{right}] = {n_items}")
+    print(f"Number of distinct items in [{left},{right}] = {n_distinct_items}")
+    if K <= 20:
+        for i in range(K):
+            print(f"Item {frequencies[i][0]} Freq = {frequencies[i][1]} Est. Freq = {frequencies[i][2]}")
+    print(f"Avg error for top {K} = {error_avg}")
+    print(f"F2 {F2_exact} F2 estimate {F2_estimate}")

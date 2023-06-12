@@ -32,8 +32,8 @@ def process_batch(time, batch):
     
     # Count sketch update
     for x in batch.collect():
-        for j in range(0, D):
-            count_sketch_matrix[j, hash[j](int(x),W)] += (hash[j](int(x),2)*2 - 1)
+        for j in range(D):
+            count_sketch_matrix[j, hash[j](int(x),W)] += g[j](int(x))
     
     if batch_size > 0:
         print("Batch size at time [{0}] is: {1}".format(time, batch_size))
@@ -84,7 +84,8 @@ if __name__ == '__main__':
     streamLength = [0]
     freq_dict = defaultdict(int)
     count_sketch_matrix = np.zeros([D,W], dtype=np.int32)
-    hash = [lambda x,C,a=a,b=b: ((a*x+b)%P)%C for a,b in [(random.randint(1,P-1), random.randint(1,P-1)) for _ in range(D)]] # Python is strange...
+    hash = [ lambda x,C,a=a,b=b: ((a*x+b)%P)%C for a,b in [ (random.randint(1,P-1), random.randint(0,P-1)) for _ in range(D) ] ] # Python is strange...
+    g = [ lambda x, a=a,b=b: (((a*x+b)%P)%2)*2-1 for a,b in [ (random.randint(1,P-1), random.randint(0,P-1)) for _ in range(D) ] ]
 
     # CODE TO PROCESS AN UNBOUNDED STREAM OF DATA IN BATCHES
     stream = ssc.socketTextStream("algo.dei.unipd.it", portExp, StorageLevel.MEMORY_AND_DISK)
@@ -117,7 +118,7 @@ if __name__ == '__main__':
     frequencies = []
     error_sum = 0
     for key, fk_exact in sorted(freq_dict.items(), key=lambda item : item[1], reverse=True)[:K]:
-        fk_estimate = statistics.median([(hash[j](key,2)*2 - 1)*count_sketch_matrix[j,hash[j](key,W)] for j in range(D)])
+        fk_estimate = statistics.median([ g[j](key)*count_sketch_matrix[j,hash[j](key,W) ] for j in range(D)])
         frequencies.append((key, fk_exact, fk_estimate))
         error_sum += abs(fk_exact-fk_estimate)/fk_exact
     error_avg = error_sum/K

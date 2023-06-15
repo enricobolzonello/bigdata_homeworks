@@ -68,7 +68,7 @@ if __name__ == '__main__':
     left = int(left)
 
     right = sys.argv[4]
-    assert right.isdigit() and int(right)>left, "right must be an integer greater than left"
+    assert right.isdigit() and int(right)>=left, "right must be an integer greater equal than left"
     right = int(right)
 
     K = sys.argv[5]
@@ -115,13 +115,14 @@ if __name__ == '__main__':
     F2_estimate = (statistics.median(F2_row_estimates))
     
     # 5. Avg. error of the k-top frequencies
-    frequencies = []
     error_sum = 0
-    for key, fk_exact in sorted(freq_dict.items(), key=lambda item : item[1], reverse=True)[:K]:
+    frequencies = []
+    top_frequencies = sorted(freq_dict.items(), key=lambda item : item[1], reverse=True)
+    for key, fk_exact in [i for i in top_frequencies if i[1] >= top_frequencies[K-1][1]]:
         fk_estimate = statistics.median([ g[j](key)*count_sketch_matrix[j,hash[j](key,W) ] for j in range(D)])
         frequencies.append((key, fk_exact, fk_estimate))
         error_sum += abs(fk_exact-fk_estimate)/fk_exact
-    error_avg = error_sum/K
+    error_avg = error_sum/len(frequencies)
     
     print(f"D = {D} W = {W}, [left,right] = [{left},{right}] K = {K} Port = {portExp}")
     print(f"Total number of items = {streamLength[0]}")

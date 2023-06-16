@@ -27,13 +27,13 @@ def process_batch(time, batch):
 
     # Count exact frequency for each item
     batch_dict = batch.map(lambda x: (int(x), 1)).reduceByKey(lambda x, y: x + y).collectAsMap()
-    for key in batch_dict:
-        freq_dict[key] += batch_dict[key]
-    
-    # Count sketch update
-    for x in batch.collect():
+    for item, frequency in batch_dict.items():
+        # Exact frequencies dictionary update
+        freq_dict[item] += frequency
+        
+        # Count sketch update
         for j in range(D):
-            count_sketch_matrix[j, hash[j](int(x),W)] += g[j](int(x))
+            count_sketch_matrix[j, hash[j](int(item))] += (g[j](int(item))*frequency)
     
     if batch_size > 0:
         print("Batch size at time [{0}] is: {1}".format(time, batch_size))
@@ -84,7 +84,7 @@ if __name__ == '__main__':
     streamLength = [0]
     freq_dict = defaultdict(int)
     count_sketch_matrix = np.zeros([D,W], dtype=np.int32)
-    hash = [ lambda x,C,a=a,b=b: ((a*x+b)%P)%C for a,b in [ (random.randint(1,P-1), random.randint(0,P-1)) for _ in range(D) ] ] # Python is strange...
+    hash = [ lambda x,a=a,b=b: ((a*x+b)%P)%W for a,b in [ (random.randint(1,P-1), random.randint(0,P-1)) for _ in range(D) ] ] # Python is strange...
     g = [ lambda x, a=a,b=b: (((a*x+b)%P)%2)*2-1 for a,b in [ (random.randint(1,P-1), random.randint(0,P-1)) for _ in range(D) ] ]
 
     # CODE TO PROCESS AN UNBOUNDED STREAM OF DATA IN BATCHES
@@ -119,7 +119,7 @@ if __name__ == '__main__':
     frequencies = []
     top_frequencies = sorted(freq_dict.items(), key=lambda item : item[1], reverse=True)
     for key, fk_exact in [i for i in top_frequencies if i[1] >= top_frequencies[K-1][1]]:
-        fk_estimate = statistics.median([ g[j](key)*count_sketch_matrix[j,hash[j](key,W) ] for j in range(D)])
+        fk_estimate = statistics.median([ g[j](key)*count_sketch_matrix[j,hash[j](key)] for j in range(D) ])
         frequencies.append((key, fk_exact, fk_estimate))
         error_sum += abs(fk_exact-fk_estimate)/fk_exact
     error_avg = error_sum/len(frequencies)

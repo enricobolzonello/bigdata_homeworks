@@ -1,0 +1,87 @@
+23/06/16 11:26:26 WARN Utils: Your hostname, francesco-Inspiron-5490 resolves to a loopback address: 127.0.1.1; using 192.168.178.26 instead (on interface wlp0s20f3)
+23/06/16 11:26:26 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/06/16 11:26:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/06/16 11:27:01 ERROR ReceiverTracker: Deregistered receiver for stream 0: Stopped by driver
+Receiving data from port = 8888
+Starting streaming engine
+Waiting for shutdown condition
+Batch size at time [2023-06-16 11:26:37] is: 689447
+Batch size at time [2023-06-16 11:26:38] is: 999588
+Batch size at time [2023-06-16 11:26:39] is: 1005229
+Batch size at time [2023-06-16 11:26:40] is: 993893
+Batch size at time [2023-06-16 11:26:41] is: 935445
+Batch size at time [2023-06-16 11:26:42] is: 1066997
+Batch size at time [2023-06-16 11:26:43] is: 985124
+Batch size at time [2023-06-16 11:26:44] is: 1016707
+Batch size at time [2023-06-16 11:26:45] is: 997548
+Batch size at time [2023-06-16 11:26:46] is: 993758
+Batch size at time [2023-06-16 11:26:47] is: 1010722
+Stopping the streaming engine
+Streaming engine stopped
+D = 9 W = 100, [left,right] = [1,10000] K = 100 Port = 8888
+Total number of items = 10694458
+Total number in items in [1,10000] = 9624811
+Number of distinct items in [1,10000] = 10000
+Avg error for top 100 = 0.6011660637260557
+F2 0.4904503988278102 F2 estimate 0.4904440762363618
+
+
+
+23/06/16 11:27:09 WARN Utils: Your hostname, francesco-Inspiron-5490 resolves to a loopback address: 127.0.1.1; using 192.168.178.26 instead (on interface wlp0s20f3)
+23/06/16 11:27:09 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/06/16 11:27:10 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/06/16 11:27:39 ERROR ReceiverTracker: Deregistered receiver for stream 0: Stopped by driver
+Receiving data from port = 8888
+Starting streaming engine
+Waiting for shutdown condition
+Batch size at time [2023-06-16 11:27:13] is: 932099
+Batch size at time [2023-06-16 11:27:14] is: 805172
+Batch size at time [2023-06-16 11:27:15] is: 1195283
+Batch size at time [2023-06-16 11:27:16] is: 988736
+Batch size at time [2023-06-16 11:27:17] is: 1010225
+Batch size at time [2023-06-16 11:27:18] is: 1004858
+Batch size at time [2023-06-16 11:27:19] is: 792224
+Batch size at time [2023-06-16 11:27:20] is: 1201762
+Batch size at time [2023-06-16 11:27:21] is: 1000132
+Batch size at time [2023-06-16 11:27:22] is: 794400
+Batch size at time [2023-06-16 11:27:23] is: 1208878
+Stopping the streaming engine
+Streaming engine stopped
+D = 9 W = 100, [left,right] = [1,10000] K = 100 Port = 8888
+Total number of items = 10933769
+Total number in items in [1,10000] = 9839660
+Number of distinct items in [1,10000] = 10000
+Avg error for top 100 = 0.2228005756066954
+F2 0.350678767609575 F2 estimate 0.35075167015200975
+
+
+
+23/06/16 11:27:49 WARN Utils: Your hostname, francesco-Inspiron-5490 resolves to a loopback address: 127.0.1.1; using 192.168.178.26 instead (on interface wlp0s20f3)
+23/06/16 11:27:49 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/06/16 11:27:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/06/16 11:28:18 ERROR ReceiverTracker: Deregistered receiver for stream 0: Stopped by driver
+Receiving data from port = 8888
+Starting streaming engine
+Waiting for shutdown condition
+Batch size at time [2023-06-16 11:27:53] is: 548432
+Batch size at time [2023-06-16 11:27:54] is: 991803
+Batch size at time [2023-06-16 11:27:55] is: 1009978
+Batch size at time [2023-06-16 11:27:56] is: 804883
+Batch size at time [2023-06-16 11:27:57] is: 1150241
+Batch size at time [2023-06-16 11:27:58] is: 1011147
+Batch size at time [2023-06-16 11:27:59] is: 1012601
+Batch size at time [2023-06-16 11:28:00] is: 1029410
+Batch size at time [2023-06-16 11:28:01] is: 995940
+Batch size at time [2023-06-16 11:28:02] is: 998286
+Batch size at time [2023-06-16 11:28:03] is: 990949
+Stopping the streaming engine
+Streaming engine stopped
+D = 9 W = 100, [left,right] = [1,10000] K = 100 Port = 8888
+Total number of items = 10543670
+Total number in items in [1,10000] = 9490151
+Number of distinct items in [1,10000] = 10000
+Avg error for top 100 = 1.1680522045674273
+F2 0.5424242256145978 F2 estimate 0.5424393764121164
+
+
+

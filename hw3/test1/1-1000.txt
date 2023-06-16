@@ -1,0 +1,39 @@
+23/06/16 11:16:08 WARN Utils: Your hostname, francesco-Inspiron-5490 resolves to a loopback address: 127.0.1.1; using 192.168.178.26 instead (on interface wlp0s20f3)
+23/06/16 11:16:08 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/06/16 11:16:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/06/16 11:16:34 ERROR ReceiverTracker: Deregistered receiver for stream 0: Stopped by driver
+Receiving data from port = 8888
+Starting streaming engine
+Waiting for shutdown condition
+Batch size at time [2023-06-16 11:16:11] is: 577400
+Batch size at time [2023-06-16 11:16:12] is: 995827
+Batch size at time [2023-06-16 11:16:13] is: 1007206
+Batch size at time [2023-06-16 11:16:14] is: 955259
+Batch size at time [2023-06-16 11:16:15] is: 1044774
+Batch size at time [2023-06-16 11:16:16] is: 802605
+Batch size at time [2023-06-16 11:16:17] is: 1200841
+Batch size at time [2023-06-16 11:16:18] is: 980628
+Batch size at time [2023-06-16 11:16:19] is: 994260
+Batch size at time [2023-06-16 11:16:20] is: 1018519
+Batch size at time [2023-06-16 11:16:21] is: 996401
+Stopping the streaming engine
+Streaming engine stopped
+D = 9 W = 30, [left,right] = [1,1000] K = 10 Port = 8888
+Total number of items = 10573720
+Total number in items in [1,1000] = 8565311
+Number of distinct items in [1,1000] = 1000
+Item 5 Freq = 6289186 Est. Freq = 6288778
+Item 6 Freq = 1121056 Est. Freq = 1120132
+Item 7 Freq = 406660 Est. Freq = 406837
+Item 8 Freq = 198449 Est. Freq = 198042
+Item 9 Freq = 114766 Est. Freq = 115324
+Item 10 Freq = 72724 Est. Freq = 72240
+Item 11 Freq = 49846 Est. Freq = 50022
+Item 12 Freq = 35336 Est. Freq = 34490
+Item 13 Freq = 26580 Est. Freq = 26911
+Item 14 Freq = 20330 Est. Freq = 19688
+Avg error for top 10 = 0.008639700452767393
+F2 0.5593923566875078 F2 estimate 0.559273543227769
+
+
+

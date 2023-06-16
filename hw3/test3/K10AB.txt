@@ -1,0 +1,50 @@
+D = 9 W = 100, [left,right] = [1,10000] K = 10 Port = 8888
+Total number of items = 10152755
+Total number in items in [1,10000] = 9138235
+Number of distinct items in [1,10000] = 10000
+Item 2 Freq = 5825555 Est. Freq = 5825588
+Item 3 Freq = 1123357 Est. Freq = 1123705
+Item 4 Freq = 427696 Est. Freq = 427798
+Item 5 Freq = 216828 Est. Freq = 216694
+Item 6 Freq = 127512 Est. Freq = 127760
+Item 7 Freq = 82580 Est. Freq = 82574
+Item 8 Freq = 57511 Est. Freq = 57427
+Item 9 Freq = 41859 Est. Freq = 42336
+Item 10 Freq = 31387 Est. Freq = 31401
+Item 11 Freq = 24597 Est. Freq = 25155
+Avg error for top 10 = 0.003917723768036678
+F2 0.4246351948922165 F2 estimate 0.4246528813293998
+
+D = 9 W = 100, [left,right] = [1,10000] K = 10 Port = 8888
+Total number of items = 10172510
+Total number in items in [1,10000] = 9155256
+Number of distinct items in [1,10000] = 10000
+Item 5 Freq = 6591087 Est. Freq = 6591048
+Item 6 Freq = 914518 Est. Freq = 914324
+Item 7 Freq = 288019 Est. Freq = 287694
+Item 8 Freq = 126694 Est. Freq = 126685
+Item 9 Freq = 67504 Est. Freq = 67198
+Item 10 Freq = 39925 Est. Freq = 40085
+Item 11 Freq = 25631 Est. Freq = 25700
+Item 12 Freq = 17719 Est. Freq = 17560
+Item 13 Freq = 12736 Est. Freq = 12658
+Item 14 Freq = 9207 Est. Freq = 9252
+Avg error for top 10 = 0.003263549291352279
+F2 0.5295404967502011 F2 estimate 0.5295106751802406
+
+D = 9 W = 100, [left,right] = [1,10000] K = 10 Port = 8888
+Total number of items = 10139132
+Total number in items in [1,10000] = 9124678
+Number of distinct items in [1,10000] = 10000
+Item 5 Freq = 6500439 Est. Freq = 6500203
+Item 6 Freq = 934693 Est. Freq = 934689
+Item 7 Freq = 300937 Est. Freq = 301052
+Item 8 Freq = 134430 Est. Freq = 134333
+Item 9 Freq = 72512 Est. Freq = 72356
+Item 10 Freq = 43496 Est. Freq = 43408
+Item 11 Freq = 28119 Est. Freq = 28044
+Item 12 Freq = 19429 Est. Freq = 19190
+Item 13 Freq = 13834 Est. Freq = 13939
+Item 14 Freq = 10247 Est. Freq = 10377
+Avg error for top 10 = 0.004056390279501063
+F2 0.5194215186160106 F2 estimate 0.519357354901558

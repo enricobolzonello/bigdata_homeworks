@@ -1,0 +1,20 @@
+D = 9 W = 15, [left,right] = [1,10000] K = 30 Port = 8888
+Total number of items = 10294020
+Total number in items in [1,10000] = 9263220
+Number of distinct items in [1,10000] = 10000
+Avg error for top 30 = 1.4992232147243025
+F2 0.5006812222540454 F2 estimate 0.5006379332569616
+
+D = 9 W = 15, [left,right] = [1,10000] K = 30 Port = 8888
+Total number of items = 10022086
+Total number in items in [1,10000] = 9020293
+Number of distinct items in [1,10000] = 10000
+Avg error for top 30 = 1.5246079919315891
+F2 0.4019792458932337 F2 estimate 0.4016939718829911
+
+D = 9 W = 15, [left,right] = [1,10000] K = 30 Port = 8888
+Total number of items = 10156153
+Total number in items in [1,10000] = 9140485
+Number of distinct items in [1,10000] = 10000
+Avg error for top 30 = 1.2240181568448407
+F2 0.40090130502602644 F2 estimate 0.4014952620368916
